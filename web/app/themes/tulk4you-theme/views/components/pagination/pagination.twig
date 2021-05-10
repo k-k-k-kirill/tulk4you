@@ -1,0 +1,30 @@
+{#
+ # Template for pagination.
+ #
+ # @version 1.0.0
+ #
+ # @var pagination        The pagination object from an index page or single content.
+ # @var pagination_title  The ARIA descriptor for this pagination.
+ #}
+
+{% if pagination %}
+  <nav class="pagination" aria-label="{{ pagination_title }}">
+    <ul class="pagination__list {{ classes }}">
+      {% if pagination.prev %}
+        <li class="pagination__list-item {{ pagination.prev.link|length ?: 'disabled' }}">
+          <a class="pagination__link" href="{{ pagination.prev.link }}" {{ pagination.prev.link|length ?: 'tabindex="-1"' }}>{{ __('Previous', textdomain) }}</a>
+        </li>
+      {% endif %}
+      {% for page in pagination.pages %}
+        <li class="pagination__list-item {{ page.current ? 'active' }}">
+          <a class="pagination__link" href="{{ page.link }}">{{ page.title }}{{ page.current ? __('<span class="sr-only">(current)</span>', textdomain) }}</a>
+        </li>
+      {% endfor %}
+      {% if pagination.next %}
+        <li class="pagination__list-item {{ pagination.next.link|length ?: 'disabled' }}">
+          <a class="pagination__link" href="{{ pagination.next.link }}" {{ pagination.next.link|length ?: 'tabindex="-1"' }}>{{ __('Next', textdomain) }}</a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}

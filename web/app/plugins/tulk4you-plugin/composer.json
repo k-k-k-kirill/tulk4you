@@ -1,0 +1,58 @@
+{
+  "name": "pixels/tulk4you-plugin",
+  "description": "Pixels plugin",
+  "type": "wordpress-plugin",
+  "homepage": "https://github.com/pixelshelsinki/tulk4you-plugin",
+  "authors": [
+    {
+      "name": "Sampo Silvennoinen",
+      "email": "sampo@pixels.fi",
+      "homepage": "https://github.com/stscoundrel"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "support": {
+    "issues": "https://github.com/pixelshelsinki/tulk4you-plugin/issues"
+  },
+  "require": {
+    "symfony/inflector": "^5.2"
+  },
+  "require-dev": {
+    "phpcompatibility/phpcompatibility-wp": "*",
+    "phpunit/phpunit": "^9",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+    "vimeo/psalm": "^4.3",
+    "wp-coding-standards/wpcs": "^2.3",
+    "giacocorsiglia/wordpress-stubs": "^5.1",
+    "squizlabs/php_codesniffer": "^3.5",
+    "kimhf/advanced-custom-fields-pro-stubs": "^5.9",
+    "wpsyntex/polylang-stubs": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pixels\\Tulk4You\\": "lib/",
+      "Pixels\\Tulk4You\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": [
+      "composer phpunit",
+      "composer psalm",
+      "composer lint"
+    ],
+    "lint": [
+      "phpcs"
+    ],
+    "fix": [
+      "phpcbf -p -w"
+    ],
+    "psalm": [
+      "psalm"
+    ],
+    "phpunit": [
+      "phpunit --testdox"
+    ]
+  }
+}

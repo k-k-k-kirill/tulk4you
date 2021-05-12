@@ -27,6 +27,18 @@
     - "cd ../../themes/tulk4you-theme && composer install"
     run_as_script: true
     shell: "BASH"
+  - action: "Install NPM packages and build"
+    type: "SSH_COMMAND"
+    login: "${ssh_username}"
+    password: "secure!TlPofdbH/7NnMSA803mzCw==.2lQK6n3PrbHj53nk2KtcUQ=="
+    host: "35.228.245.82"
+    port: "43336"
+    authentication_mode: "PASS"
+    commands:
+    - "cd deploy-cache/web/app/themes/tulk4you-theme && yarn"
+    - "yarn build"
+    run_as_script: true
+    shell: "BASH"
   - action: "Post-deployment action"
     type: "SSH_COMMAND"
     login: "${ssh_username}"

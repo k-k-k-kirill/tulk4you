@@ -23,7 +23,7 @@
     authentication_mode: "PASS"
     commands:
     - "cd deploy-cache && composer install"
-    - "cd deploy-cache/web/app/plugins/tulk4you-plugin && composer install"
+    - "cd web/app/plugins/tulk4you-plugin && composer install"
     - "cd ../../themes/tulk4you-theme && composer install"
     run_as_script: true
     shell: "BASH"

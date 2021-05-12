@@ -45,7 +45,7 @@
     - "fi"
     - "if [ ! -d \"shared/uploads\" ];"
     - "then"
-    - "mkdir shared/uploads"
+    - "mkdir -p shared/uploads"
     - "ln -s shared/uploads current/web/app/uploads"
     - "fi"
     - ""

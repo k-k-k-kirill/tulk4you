@@ -44,7 +44,6 @@
     - ""
     - "echo \"Linking ENV of current revision: $BUDDY_EXECUTION_REVISION\""
     - "cp -n current/.env.example shared/.env"
-    - "rm -f shared/.env"
     - "ln -s shared/.env current/.env"
     - "echo \"Removing old releases\""
     - "cd releases && ls -t | tail -n +11 | xargs rm -rf"

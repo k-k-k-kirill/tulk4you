@@ -43,6 +43,7 @@
     - ln -s releases/$BUDDY_EXECUTION_REVISION/web/uploads shared/uploads
     - ""
     - "echo \"Copying ENV of current revision: $BUDDY_EXECUTION_REVISION\""
+    - "cp -n current/.env.example shared/.env"
     - "cp shared/.env current/.env"
     - "echo \"Removing old releases\""
     - "cd releases && ls -t | tail -n +11 | xargs rm -rf"

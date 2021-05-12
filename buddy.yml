@@ -38,7 +38,7 @@
     - "rm -f current"
     - "ln -s releases/$BUDDY_EXECUTION_REVISION current"
     - "echo \"Linking uploads of current revision: $BUDDY_EXECUTION_REVISION\""
-    - "if [ -d \"shared/uploads\" ];"
+    - "if [ -d \"shared\" ];"
     - "then"
     - "rm -f shared/uploads"
     - "ln -s shared/uploads current/web/app/uploads"

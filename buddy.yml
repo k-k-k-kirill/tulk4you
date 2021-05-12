@@ -5,6 +5,17 @@
   priority: "NORMAL"
   fail_on_prepare_env_warning: true
   actions:
+  - action: "Install NPM dependencies and build"
+    type: "BUILD"
+    working_directory: "/buddy/tulk4you"
+    docker_image_name: "library/ubuntu"
+    docker_image_tag: "18.04"
+    execute_commands:
+    - "cd web/app/themes/tulk4you-theme && npm install"
+    - "npm run build"
+    volume_mappings:
+    - "/:/buddy/tulk4you"
+    shell: "BASH"
   - action: "Upload files to production"
     type: "SFTP"
     input_type: "SCM_REPOSITORY"

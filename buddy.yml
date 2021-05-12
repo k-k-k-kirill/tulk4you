@@ -31,7 +31,7 @@
     - "if [ ! -d \"releases/$BUDDY_EXECUTION_REVISION\" ];"
     - "then"
     - " echo \"Creating: releases/$BUDDY_EXECUTION_REVISION\""
-    - " cp -dR deploy-cache releases/$BUDDY_EXECUTION_REVISION;"
+    - " cp -dR --preserve-links deploy-cache releases/$BUDDY_EXECUTION_REVISION;"
     - "fi"
     - ""
     - "echo \"Copying ENV of current revision: $BUDDY_EXECUTION_REVISION\""

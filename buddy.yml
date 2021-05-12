@@ -9,9 +9,8 @@
     type: "BUILD"
     working_directory: "/buddy/tulk4you"
     docker_image_name: "library/node"
-    docker_image_tag: "12"
+    docker_image_tag: "14"
     execute_commands:
-    - "nvm use 14"
     - "cd web/app/themes/tulk4you-theme"
     - "yarn"
     - "yarn build"

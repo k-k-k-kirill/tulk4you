@@ -36,7 +36,7 @@
     - ""
     - "echo \"Copying ENV of current revision: $BUDDY_EXECUTION_REVISION\""
     - "cp -n releases/$BUDDY_EXECUTION_REVISION/.env.example shared/.env"
-    - "ln -s shared/.env current/.env"
+    - "cp shared/.env releases/$BUDDY_EXECUTION_REVISION/.env"
     - "echo \"Linking current to revision: $BUDDY_EXECUTION_REVISION\""
     - "rm -f current"
     - "ln -s releases/$BUDDY_EXECUTION_REVISION current"

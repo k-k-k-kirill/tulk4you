@@ -38,16 +38,9 @@
     - "rm -f current"
     - "ln -s releases/$BUDDY_EXECUTION_REVISION current"
     - "echo \"Linking uploads of current revision: $BUDDY_EXECUTION_REVISION\""
-    - "if [ -d \"shared\" ];"
-    - "then"
-    - "rm -f shared/uploads"
-    - "ln -s shared/uploads current/web/app/uploads"
-    - "fi"
-    - "if [ ! -d \"shared\" ];"
-    - "then"
-    - "mkdir -p shared"
-    - "ln -s shared/uploads current/web/app/uploads"
-    - "fi"
+    - mkdir -p shared/uploads
+    - rm -rf releases/$BUDDY_EXECUTION_REVISION/web/uploads
+    - ln -s releases/$BUDDY_EXECUTION_REVISION/web/uploads shared/uploads
     - ""
     - "echo \"Copying ENV of current revision: $BUDDY_EXECUTION_REVISION\""
     - "cp shared/.env current/.env"

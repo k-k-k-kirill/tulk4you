@@ -11,6 +11,7 @@
     docker_image_name: "library/node"
     docker_image_tag: "12"
     execute_commands:
+    - "nvm use 14"
     - "cd web/app/themes/tulk4you-theme"
     - "yarn"
     - "yarn build"

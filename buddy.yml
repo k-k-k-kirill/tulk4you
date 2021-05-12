@@ -39,12 +39,13 @@
     - "ln -s releases/$BUDDY_EXECUTION_REVISION current"
     - "echo \"Linking uploads of current revision: $BUDDY_EXECUTION_REVISION\""
     - mkdir -p shared
-    - rm -rf shared/uploads
+    - rm -f shared/uploads
     - ln -s releases/$BUDDY_EXECUTION_REVISION/web/uploads shared
     - ""
-    - "echo \"Copying ENV of current revision: $BUDDY_EXECUTION_REVISION\""
+    - "echo \"Linking ENV of current revision: $BUDDY_EXECUTION_REVISION\""
     - "cp -n current/.env.example shared/.env"
-    - "cp shared/.env current/.env"
+    - "rm -f shared/.env"
+    - "ln -s current/.env shared/.env"
     - "echo \"Removing old releases\""
     - "cd releases && ls -t | tail -n +11 | xargs rm -rf"
     run_as_script: true

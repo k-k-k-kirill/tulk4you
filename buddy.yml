@@ -38,9 +38,9 @@
     - "rm -f current"
     - "ln -s releases/$BUDDY_EXECUTION_REVISION current"
     - "echo \"Linking uploads of current revision: $BUDDY_EXECUTION_REVISION\""
-    - mkdir -p shared/uploads
+    - mkdir -p shared
     - rm -rf releases/$BUDDY_EXECUTION_REVISION/web/uploads
-    - ln -s releases/$BUDDY_EXECUTION_REVISION/web/uploads shared/uploads
+    - ln -s releases/$BUDDY_EXECUTION_REVISION/web/uploads shared
     - ""
     - "echo \"Copying ENV of current revision: $BUDDY_EXECUTION_REVISION\""
     - "cp -n current/.env.example shared/.env"

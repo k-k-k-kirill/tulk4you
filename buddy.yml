@@ -49,6 +49,8 @@
     - "ln -s shared/uploads current/web/app/uploads"
     - "fi"
     - ""
+    - "echo \"Copying ENV of current revision: $BUDDY_EXECUTION_REVISION\""
+    - "cp shared/.env current/.env"
     - "echo \"Removing old releases\""
     - "cd releases && ls -t | tail -n +11 | xargs rm -rf"
     run_as_script: true

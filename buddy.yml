@@ -35,8 +35,8 @@
     port: "43336"
     authentication_mode: "PASS"
     commands:
-    - "cd deploy-cache/web/app/themes/tulk4you-theme && yarn"
-    - "yarn build"
+    - "cd deploy-cache/web/app/themes/tulk4you-theme && npm install"
+    - "npm run build"
     run_as_script: true
     shell: "BASH"
   - action: "Post-deployment action"

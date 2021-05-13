@@ -1,35 +1,35 @@
 .btn,
 button {
   display: inline-block;
+  min-width: 180px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: all 0.15s ease-in-out;
+  text-align: center;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  text-decoration: none;
 
-  // &:hover {
+  &:hover {
+    color: white;
+    transform: translateY(-5px);
+  }
 
-  // }
+  &:focus {
+    color: white;
+  }
 
-  // &:focus {
+  &--primary,
+  &-primary {
+    background-color: $color-red;
+    color: white;
+  }
 
-  // }
-
-  // &--primary,
-  // &-primary {
-  //   &:hover {
-
-  //   }
-
-  //   &:focus {
-
-  //   }
-  // }
-
-  // &--secondary,
-  // &-secondary {
-  //   &:hover {
-
-  //   }
-
-  //   &:focus {
-
-  //   }
-
-  // }
+  &--secondary,
+  &-secondary {
+    color: white;
+    background-color: $color-body;
+  }
 }

@@ -68,6 +68,7 @@
     - "ln -s releases/$BUDDY_EXECUTION_REVISION current"
     - "echo \"Linking uploads of current revision: $BUDDY_EXECUTION_REVISION\""
     - "mkdir -p shared"
+    - "mkdir -p shared/uploads"
     - "rm -rf releases/$BUDDY_EXECUTION_REVISION/web/uploads"
     - "ln -s shared/uploads releases/$BUDDY_EXECUTION_REVISION/web/uploads"
     - ""

@@ -10,8 +10,8 @@ $color-link-hover: #000;
 /* #################################### */
 
 // Fonts
-$font-body:           "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-heading:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-body:           "Noto Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-heading:        "Noto Serif", Helvetica, Arial, sans-serif;
 
 // Typography breakpoints
 // NOTE: These are crucial for fluid-type mixin.
@@ -27,38 +27,38 @@ $body-letter-spacing-mobile:   normal;
 $body-font-weight-mobile:      normal;
 
 // H1 styles mobile
-$h1-font-size-mobile:          40px;
-$h1-line-height-mobile:        1.5;
+$h1-font-size-mobile:          44px;
+$h1-line-height-mobile:        1.2;
 $h1-letter-spacing-mobile:     0;
 $h1-font-weight-mobile:        bold;
 
 // H2 styles mobile
-$h2-font-size-mobile:          32px;
-$h2-line-height-mobile:        1.5;
+$h2-font-size-mobile:          36px;
+$h2-line-height-mobile:        1.17;
 $h2-letter-spacing-mobile:     0;
 $h2-font-weight-mobile:        bold;
 
 // H3 styles mobile
 $h3-font-size-mobile:          28px;
-$h3-line-height-mobile:        1.5;
+$h3-line-height-mobile:        1.3;
 $h3-letter-spacing-mobile:     0;
 $h3-font-weight-mobile:        bold;
 
 // H4 styles mobile
 $h4-font-size-mobile:          24px;
-$h4-line-height-mobile:        1.5;
+$h4-line-height-mobile:        1.33;
 $h4-letter-spacing-mobile:     0;
-$h4-font-weight-mobile:        bold;
+$h4-font-weight-mobile:        normal;
 
 // H5 styles mobile
 $h5-font-size-mobile:          20px;
-$h5-line-height-mobile:        1.5;
+$h5-line-height-mobile:        1.55;
 $h5-letter-spacing-mobile:     0;
 $h5-font-weight-mobile:        bold;
 
 // H6 styles mobile
 $h6-font-size-mobile:          16px;
-$h6-line-height-mobile:        1;
+$h6-line-height-mobile:        1.5;
 $h6-letter-spacing-mobile:     0;
 $h6-font-weight-mobile:        bold;
 
@@ -77,40 +77,40 @@ $body-letter-spacing-tablet:   normal;
 $body-font-weight-tablet:      normal;
 
 // H1 styles tablet
-$h1-font-size-tablet:          40px;
-$h1-line-height-tablet:        1.5;
+$h1-font-size-tablet:          59px;
+$h1-line-height-tablet:        1.3;
 $h1-letter-spacing-tablet:     0;
 $h1-font-weight-tablet:        bold;
 
 // H2 styles tablet
-$h2-font-size-tablet:          32px;
-$h2-line-height-tablet:        1.5;
+$h2-font-size-tablet:          44px;
+$h2-line-height-tablet:        1.2;
 $h2-letter-spacing-tablet:     0;
 $h2-font-weight-tablet:        bold;
 
 // H3 styles tablet
-$h3-font-size-tablet:          28px;
-$h3-line-height-tablet:        1.5;
+$h3-font-size-tablet:          36px;
+$h3-line-height-tablet:        1.17;
 $h3-letter-spacing-tablet:     0;
 $h3-font-weight-tablet:        bold;
 
 // H4 styles tablet
-$h4-font-size-tablet:          24px;
-$h4-line-height-tablet:        1.5;
+$h4-font-size-tablet:          28px;
+$h4-line-height-tablet:        1.29;
 $h4-letter-spacing-tablet:     0;
 $h4-font-weight-tablet:        bold;
 
 // H5 styles tablet
-$h5-font-size-tablet:          20px;
-$h5-line-height-tablet:        1.5;
+$h5-font-size-tablet:          24px;
+$h5-line-height-tablet:        1.33;
 $h5-letter-spacing-tablet:     0;
-$h5-font-weight-tablet:        bold;
+$h5-font-weight-tablet:        normal;
 
 // H6 styles tablet
-$h6-font-size-tablet:          16px;
-$h6-line-height-tablet:        1;
+$h6-font-size-tablet:          20px;
+$h6-line-height-tablet:        1.55;
 $h6-letter-spacing-tablet:     0;
-$h6-font-weight-tablet:        bold;
+$h6-font-weight-tablet:        normal;
 
 /* #################################### */
 
@@ -121,38 +121,38 @@ $body-letter-spacing:   normal;
 $body-font-weight:      normal;
 
 // H1 styles desktop
-$h1-font-size:          40px;
-$h1-line-height:        1.5;
+$h1-font-size:          59px;
+$h1-line-height:        1.3;
 $h1-letter-spacing:     0;
 $h1-font-weight:        bold;
 
 // H2 styles desktop
-$h2-font-size:          32px;
-$h2-line-height:        1.5;
+$h2-font-size:          44px;
+$h2-line-height:        1.2;
 $h2-letter-spacing:     0;
 $h2-font-weight:        bold;
 
 // H3 styles desktop
-$h3-font-size:          28px;
-$h3-line-height:        1.5;
+$h3-font-size:          36px;
+$h3-line-height:        1.17;
 $h3-letter-spacing:     0;
 $h3-font-weight:        bold;
 
 // H4 styles desktop
-$h4-font-size:          24px;
-$h4-line-height:        1.5;
+$h4-font-size:          28px;
+$h4-line-height:        1.29;
 $h4-letter-spacing:     0;
 $h4-font-weight:        bold;
 
 // H5 styles desktop
-$h5-font-size:          20px;
-$h5-line-height:        1.5;
+$h5-font-size:          24px;
+$h5-line-height:        1.33;
 $h5-letter-spacing:     0;
-$h5-font-weight:        bold;
+$h5-font-weight:        normal;
 
 // H6 styles desktop
-$h6-font-size:          16px;
-$h6-line-height:        1;
+$h6-font-size:          20px;
+$h6-line-height:        1.55;
 $h6-letter-spacing:     0;
 $h6-font-weight:        bold;
 

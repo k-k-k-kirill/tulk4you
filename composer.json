@@ -28,6 +28,18 @@
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "kinsta/kinsta-mu-plugins",
+        "type": "wordpress-muplugin",
+        "version": "2.3.3",
+        "dist": {
+          "url": "https://kinsta.com/kinsta-tools/kinsta-mu-plugins.zip",
+          "type": "zip"
+        }
+      }
     }
   ],
   "require": {
@@ -38,7 +50,8 @@
     "roots/bedrock-autoloader": "^1.0",
     "roots/wordpress": "5.7",
     "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0"
+    "roots/wp-password-bcrypt": "1.0.0",
+    "kinsta/kinsta-mu-plugins": "2.3.3"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.8",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f32491e1ab7eb74d79d1d8e58c5c6993",
+    "content-hash": "114b04d7888114d921175c8451d78c09",
     "packages": [
         {
             "name": "composer/installers",
@@ -134,20 +134,6 @@
                 "zend",
                 "zikula"
             ],
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2021-01-14T11:07:16+00:00"
         },
         {
@@ -200,17 +186,16 @@
                 "Result-Type",
                 "result"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/graham-campbell/result-type",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-04-13T13:17:36+00:00"
+        },
+        {
+            "name": "kinsta/kinsta-mu-plugins",
+            "version": "2.3.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://kinsta.com/kinsta-tools/kinsta-mu-plugins.zip"
+            },
+            "type": "wordpress-muplugin"
         },
         {
             "name": "oscarotero/env",
@@ -315,16 +300,6 @@
                 "php",
                 "type"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/phpoption/phpoption",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-07-20T17:29:33+00:00"
         },
         {
@@ -384,16 +359,6 @@
                 "plugin",
                 "wordpress"
             ],
-            "funding": [
-                {
-                    "url": "https://github.com/roots",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/rootsdev",
-                    "type": "patreon"
-                }
-            ],
             "time": "2020-12-04T15:59:12+00:00"
         },
         {
@@ -406,7 +371,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.7"
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.7",
+                "reference": "5.7"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -429,16 +395,6 @@
                 "blog",
                 "cms",
                 "wordpress"
-            ],
-            "funding": [
-                {
-                    "url": "https://github.com/roots",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/rootsdev",
-                    "type": "patreon"
-                }
             ],
             "time": "2021-03-09T20:23:15+00:00"
         },
@@ -496,16 +452,6 @@
             "description": "A custom installer to handle deploying WordPress with composer",
             "keywords": [
                 "wordpress"
-            ],
-            "funding": [
-                {
-                    "url": "https://github.com/roots",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/rootsdev",
-                    "type": "patreon"
-                }
             ],
             "time": "2020-08-20T00:27:30+00:00"
         },
@@ -668,20 +614,6 @@
                 "polyfill",
                 "portable"
             ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2021-01-07T16:49:33+00:00"
         },
         {
@@ -744,20 +676,6 @@
                 "polyfill",
                 "portable",
                 "shim"
-            ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
             ],
             "time": "2021-01-07T16:49:33+00:00"
         },
@@ -825,20 +743,6 @@
                 "portable",
                 "shim"
             ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2021-01-07T16:49:33+00:00"
         },
         {
@@ -904,16 +808,6 @@
                 "dotenv",
                 "env",
                 "environment"
-            ],
-            "funding": [
-                {
-                    "url": "https://github.com/GrahamCampbell",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
-                    "type": "tidelift"
-                }
             ],
             "time": "2021-01-20T15:23:13+00:00"
         }
@@ -1232,16 +1126,6 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "funding": [
-                {
-                    "url": "https://github.com/Ocramius",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/roave/security-advisories",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2021-03-08T17:27:54+00:00"
         },
         {
@@ -1306,6 +1190,5 @@
     "platform": {
         "php": ">=7.1"
     },
-    "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "platform-dev": []
 }

@@ -1,0 +1,7 @@
+<a href="{{url}}" target="_blank" class="icon-link {{classes}}">
+    {% if icon %}
+        {% include 'assets/images/' ~ icon ~ '.svg' %} 
+    {% endif %}
+       
+    <span>{{text}}</span>
+</a>

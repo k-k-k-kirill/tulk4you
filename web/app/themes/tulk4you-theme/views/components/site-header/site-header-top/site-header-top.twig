@@ -1,0 +1,34 @@
+{% if site.company_information %}
+    {% set company_information = site.company_information %}
+
+    <div class="site-header-top">
+        <div class="container site-header-top__content">
+            {% if company_information.phone %}
+                {% include 'icon-link/icon-link.twig' with { 
+                    url: 'tel:' ~ company_information.phone,
+                    text: company_information.phone,
+                    classes: 'mr-4', 
+                    icon: 'telephone'
+                } %}
+            {% endif %}
+
+            {% if company_information.email %}
+                {% include 'icon-link/icon-link.twig' with {
+                    url: 'mailto:' ~ company_information.email,
+                    text: company_information.email,
+                    classes: 'md:mr-4',
+                    icon: 'email'
+                } %}
+            {% endif %}
+
+            {% if company_information.location %}
+                {% include 'icon-link/icon-link.twig' with {
+                    url: 'https://maps.google.com/?saddr=My+Location&daddr=' ~ company_information.location.address,
+                    text: company_information.location.address,
+                    icon: 'location',
+                    classes: 'hide-on-mobile'
+                } %}
+            {% endif %}
+        </div>
+    </div>
+{% endif %}

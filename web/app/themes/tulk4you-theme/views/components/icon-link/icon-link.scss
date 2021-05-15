@@ -1,0 +1,39 @@
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1.5;
+  color: $color-body;
+
+  @extend .smooth-transition-all;
+
+  @media (min-width: 420px) {
+    font-size: 14px;
+  }
+
+  svg {
+    height: 15px;
+    width: auto;
+    margin-right: 10px;
+
+    @media (min-width: 768px) {
+      height: 18px;
+    }
+
+    path {
+      transition: all 0.12s ease-in-out;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-red;
+
+    svg {
+      path {
+        fill: $color-red !important;
+      }
+    }
+  }
+}

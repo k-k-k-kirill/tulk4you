@@ -63,3 +63,13 @@ a {
     color: $color-link-hover;
   }
 }
+
+.smooth-transition-all {
+  transition: all 0.15s ease-in-out;
+}
+
+.hide-on-mobile {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}

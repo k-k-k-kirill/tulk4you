@@ -1,0 +1,15 @@
+.site-header-top {
+  background-color: $color-gray;
+  padding: 12px 0;
+
+  &__content {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+    }
+  }
+}

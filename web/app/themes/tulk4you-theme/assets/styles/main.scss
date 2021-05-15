@@ -1,5 +1,8 @@
 @import "reset-css";
 @import "common/variables";
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+@import "~tailwindcss/utilities";
 
 // *************
 // Common styles
@@ -26,7 +29,9 @@
 @import "../../views/components/form/form-new-comment";
 @import "../../views/components/single-content/single-content";
 @import "../../views/components/site-header/site-header";
+@import "../../views/components/site-header/site-header-top/site-header-top";
 @import "../../views/components/typography/typography";
+@import "../../views/components/icon-link/icon-link";
 
 // ****************
 // Teaser styles

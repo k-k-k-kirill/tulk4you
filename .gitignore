@@ -11,6 +11,7 @@ web/app/plugins/*
 # Premium plugins
 !web/app/plugins/advanced-custom-fields-pro
 !web/app/plugins/polylang-pro
+!web/app/plugins/tulk4you-plugin
 
 # WordPress
 web/wp

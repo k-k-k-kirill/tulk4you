@@ -7,7 +7,7 @@
 
 namespace Pixels\Tulk4You\Admin;
 
-use Pixels\Tulk4You\Admin\OptionsPages\Example;
+use Pixels\Tulk4You\Admin\OptionsPages\CompanyInformation;
 
 /**
  * Instantiates individual options pages
@@ -15,11 +15,11 @@ use Pixels\Tulk4You\Admin\OptionsPages\Example;
 class OptionsPages {
 
 	/**
-	 * Options page.
+	 * Company Information options page.
 	 *
-	 * @var Example
+	 * @var CompanyInformation
 	 */
-	private $example;
+	private $company_information;
 
 	/**
 	 * Class constructor
@@ -38,7 +38,7 @@ class OptionsPages {
 	public function load_acf_options_pages() {
 
 		// Load options pages.
-		// $this->example = new OptionsPages\Example();.
+		$this->company_information = new OptionsPages\CompanyInformation();
 	}
 
 }

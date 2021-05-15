@@ -1,5 +1,5 @@
 <div class="container site-header-bottom py-3">
-  <div class="flex">
+  <div class="inline-flex">
     <a href="{{polylang.home}}" class="site-logo">
       {% include 'assets/images/logo.svg' %}
     </a>
@@ -9,4 +9,12 @@
       classes: 'site-header__nav'
     } %}
   </div>
+
+  {% if site.header_cta %}
+    {% if site.header_cta.title and site.header_cta.url %}
+      <div>
+        <a href="{{site.header_cta.url}}" target="{{site.header_cta.target}}" class="btn btn--primary">{{site.header_cta.title}}</a>
+      </div>
+    {% endif %}
+  {% endif %}
 </div>

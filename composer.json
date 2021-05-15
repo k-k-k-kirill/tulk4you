@@ -51,7 +51,8 @@
     "roots/wordpress": "5.7",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "kinsta/kinsta-mu-plugins": "2.3.3"
+    "kinsta/kinsta-mu-plugins": "2.3.3",
+    "wpackagist-plugin/classic-editor": "1.6"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.8",

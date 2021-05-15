@@ -6,6 +6,8 @@ web/app/uploads/*
 !web/app/uploads/.gitkeep
 sql
 .circleci
+web/app/plugins/*
+!web/app/plugins/advanced-custom-fields-pro
 
 # WordPress
 web/wp

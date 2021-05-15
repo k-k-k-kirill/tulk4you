@@ -1,0 +1,12 @@
+<div class="container site-header-bottom py-3">
+  <div class="flex">
+    <a href="{{polylang.home}}" class="site-logo">
+      {% include 'assets/images/logo.svg' %}
+    </a>
+
+    {% include 'nav/nav.twig' with {
+      nav_items: menu.desktop,
+      classes: 'site-header__nav'
+    } %}
+  </div>
+</div>

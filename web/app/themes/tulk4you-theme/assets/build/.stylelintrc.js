@@ -7,6 +7,7 @@ module.exports = {
   ],
   'rules': {
     'value-keyword-case': null,
+    'no-descending-specificity': null,
     'no-empty-source': null,
     'string-quotes': 'double',
     'at-rule-no-unknown': [

@@ -6,6 +6,7 @@
  */
 
 namespace Pixels\Tulk4You\Model\Meta;
+use function Env\env;
 
 /**
  * ACF class
@@ -21,6 +22,7 @@ class ACF {
 	public function __construct() {
 		add_filter( 'acf/settings/load_json', array( $this, 'add_acf_json_load_point' ), 99 );
 		add_filter( 'acf/settings/save_json', array( $this, 'add_acf_json_save_point' ), 99 );
+		add_filter('acf/fields/google_map/api', array( $this, 'acf_google_maps_api_key' ), 99);
 	}
 
 	/**
@@ -41,6 +43,16 @@ class ACF {
 	public function add_acf_json_save_point( $path ) {
 		$path = __DIR__ . '/Migrations/';
 		return $path;
+	}
+
+	function acf_google_maps_api_key( $api ){
+		$api_key = env('GOOGLE_API_KEY') ? env('GOOGLE_API_KEY') : null;
+
+		if(isset($api_key)) {
+			$api['key'] = $api_key;
+		}
+		
+		return $api;
 	}
 
 }

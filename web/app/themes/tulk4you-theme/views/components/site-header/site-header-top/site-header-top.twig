@@ -7,7 +7,7 @@
                 {% include 'icon-link/icon-link.twig' with { 
                     url: 'tel:' ~ company_information.phone,
                     text: company_information.phone,
-                    classes: 'mr-4', 
+                    classes: 'md:mr-4', 
                     icon: 'telephone'
                 } %}
             {% endif %}
@@ -26,9 +26,11 @@
                     url: 'https://maps.google.com/?saddr=My+Location&daddr=' ~ company_information.location.address,
                     text: company_information.location.address,
                     icon: 'location',
-                    classes: 'hide-on-mobile'
+                    classes: 'hide-on-mobile mr-4'
                 } %}
             {% endif %}
+
+            {% include "nav/nav-languages.twig" %}
         </div>
     </div>
 {% endif %}

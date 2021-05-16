@@ -1,12 +1,14 @@
 {% if polylang and polylang.languages|length > 1 %}
   <li class="nav-languages dropdown">
     <a class="nav-languages__link " href="#" id="LanguageDropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      {% include 'assets/images/languages.svg' %}
       <span class="nav-label">{{ polylang.current }}</span>
+      {% include 'assets/images/chevron-down.svg' %}
     </a>
     <div class="nav-languages__dropdown" aria-labelledby="LanguageDropdown">
       {% for language in polylang.languages %}
         {% if language.name != polylang.current %}
-        <a class="nav-languages__dropdown-item {{ language.classes|join(' ') }}" href="{{ language.url }}">{{ language.name }}</a>
+          <a class="nav-languages__dropdown-item {{ language.classes|join(' ') }}" href="{{ language.url }}">{{ language.name }}</a>
         {% endif %}
       {% endfor %}
     </div>

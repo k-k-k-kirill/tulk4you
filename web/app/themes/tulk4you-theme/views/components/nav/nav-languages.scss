@@ -88,17 +88,22 @@
     background-color: $color-gray;
     position: absolute;
     top: 30px;
-    left: -50%;
+    left: -200%;
     z-index: 9999;
 
-    @media (min-width: 800px) {
-      left: 0;
+    @media (min-width: 768px) {
+      left: -120%;
+    }
+
+    @media (min-width: 1024px) {
+      left: -130%;
     }
 
     &-item {
       color: $color-body;
       text-transform: capitalize;
       transition: all 0.15s ease-in-out;
+      white-space: nowrap;
 
       &:hover,
       &:focus {

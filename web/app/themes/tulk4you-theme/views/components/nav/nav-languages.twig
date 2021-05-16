@@ -7,7 +7,7 @@
     </a>
     <div class="nav-languages__dropdown" aria-labelledby="LanguageDropdown">
       {% for language in polylang.languages %}
-        {% if language.name != polylang.current %}
+        {% if language.slug != polylang.current %}
           <a class="nav-languages__dropdown-item {{ language.classes|join(' ') }}" href="{{ language.url }}">{{ language.name }}</a>
         {% endif %}
       {% endfor %}

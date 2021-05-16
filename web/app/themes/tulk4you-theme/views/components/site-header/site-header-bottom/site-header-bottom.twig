@@ -1,20 +1,28 @@
 <div class="container site-header-bottom py-3">
-  <div class="inline-flex">
+  <div class="inline-flex items-center">
     <a href="{{polylang.home}}" class="site-logo">
       {% include 'assets/images/logo.svg' %}
     </a>
 
     {% include 'nav/nav.twig' with {
       nav_items: menu.desktop,
-      classes: 'site-header__nav'
+      classes: 'site-header__nav hidden lg:flex'
     } %}
   </div>
 
-  {% if site.header_cta %}
-    {% if site.header_cta.title and site.header_cta.url %}
-      <div>
-        <a href="{{site.header_cta.url}}" target="{{site.header_cta.target}}" class="btn btn--primary">{{site.header_cta.title}}</a>
-      </div>
-    {% endif %}
-  {% endif %}
+  <div>
+    <a href="{{site.header_cta.url}}" target="{{site.header_cta.target}}" class="btn btn--primary">{{site.header_cta.title}}</a>
+
+    <button class="hamburger hamburger--collapse js-hamburger ml-2 lg:hidden" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <div class="nav-mobile__container js-nav-mobile-container">
+      {% include 'nav/nav-mobile.twig' with {
+        nav_items: menu.desktop
+      } %}
+    </div>
+  </div>
 </div>

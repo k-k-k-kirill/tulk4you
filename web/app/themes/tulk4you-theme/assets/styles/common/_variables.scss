@@ -170,3 +170,14 @@ $lead-font-weight:      normal;
 
 // Misc
 $spacer:                1rem;
+
+// Hamburger
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-border-radius : 0;
+$hamburger-layer-color: $color-body;
+$hamburger-active-layer-color: $color-red;
+$hamburger-hover-opacity: 1;
+$hamburger-layer-width: 20px;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 4px;

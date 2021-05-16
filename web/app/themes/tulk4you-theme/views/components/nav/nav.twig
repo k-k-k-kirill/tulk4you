@@ -7,19 +7,19 @@
  #}
 
 {% if nav_items %}
-	<ul class="nav {{ classes }}">
+	<ul class="nav-desktop {{ classes }}">
 		{% for item in nav_items %}
-			<li class="nav__item {{ item.get_children ? 'nav__item--dropdown' }} {{ item.classes|join(' ') }} ml-4">
+			<li class="nav-desktop__item {{ item.get_children ? 'nav-desktop__item--dropdown' }} {{ item.classes|join(' ') }} lg:ml-4">
 				{% if not item.get_children %}
-					<a class="nav__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+					<a class="nav-desktop__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
 				{% else %}
-					<a class="nav__link nav__link--toggle" target="{{ item.target }}" href="{{ item.link }}" id="{{ item.slug }}-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a class="nav-desktop__link nav-desktop__link--toggle" target="{{ item.target }}" href="{{ item.link }}" id="{{ item.slug }}-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<span>{{ item.title }}</span>
 						{% include 'assets/images/chevron-down.svg' %}
 					</a>
-					<div class="nav__dropdown-menu" aria-labelledby="{{ item.slug }}-dropdown">
+					<div class="nav-desktop__dropdown-menu" aria-labelledby="{{ item.slug }}-dropdown">
 						{% for sub_item in item.get_children %}
-							<a class="nav__dropdown-item {{ sub_item.classes|join(' ') }} {{loop.last == false ? 'mb-1' : ''}}" target="{{ sub_item.target }}" href="{{ sub_item.link }}">{{ sub_item.title }}</a>
+							<a class="nav-desktop__dropdown-item {{ sub_item.classes|join(' ') }} {{loop.last == false ? 'mb-1' : ''}}" target="{{ sub_item.target }}" href="{{ sub_item.link }}">{{ sub_item.title }}</a>
 						{% endfor %}
 					</div>
 				{% endif %}

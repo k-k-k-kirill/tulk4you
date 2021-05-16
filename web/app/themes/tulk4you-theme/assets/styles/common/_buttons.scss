@@ -1,16 +1,22 @@
-.btn,
-button {
+.btn {
   display: inline-block;
-  min-width: 180px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  min-width: 120px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   transition: all 0.15s ease-in-out;
   text-align: center;
   border-radius: 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.25;
   font-weight: 700;
   text-decoration: none;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    min-width: 180px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
 
   &:hover {
     color: white;

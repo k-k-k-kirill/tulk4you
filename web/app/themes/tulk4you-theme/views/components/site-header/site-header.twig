@@ -2,7 +2,7 @@
  # Template for the site header.
  #}
 
-<header class="site-header">
+<header class="site-header fixed">
   <nav class="site-header__navbar {{ fn('is_admin_bar_showing') ? 'admin-bar-showing' : '' }}">
     {% include "site-header/site-header-top/site-header-top.twig" %}
     {% include "site-header/site-header-bottom/site-header-bottom.twig" %}

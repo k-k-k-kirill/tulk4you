@@ -1,5 +1,6 @@
 @import "reset-css";
 @import "common/variables";
+@import "~hamburgers/_sass/hamburgers/hamburgers.scss";
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
@@ -35,6 +36,7 @@
 @import "../../views/components/icon-link/icon-link";
 @import "../../views/components/nav/nav";
 @import "../../views/components/nav/nav-languages";
+@import "../../views/components/nav/nav-mobile";
 
 // ****************
 // Teaser styles

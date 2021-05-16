@@ -69,7 +69,16 @@ a {
 }
 
 .hide-on-mobile {
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: none !important;
+  }
+}
+
+.header-margin {
+  display: block;
+  margin-top: 149px;
+
+  @media (min-width: 1024px) {
+    margin-top: 159px;
   }
 }

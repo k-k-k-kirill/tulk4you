@@ -10,9 +10,44 @@ const pixelsThemeApp = (function main() {
     makeEmbedsResponsive(videos)
   }
 
+  const handleHamburgerClick = () => {
+    const hamburger = document.querySelector('.js-hamburger');
+
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
+
+        const mobileNav = document.querySelector('.js-nav-mobile-container');
+
+        if (mobileNav) {
+          mobileNav.classList.toggle('show');
+        }
+      });
+    }
+  }
+
+  const handleMobileDropdownToggleClick = () => {
+    const toggles = document.querySelectorAll('.js-nav-mobile-dropdown-toggle');
+
+    if (toggles) {
+      toggles.forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+          const dropdownMenuId = toggle.dataset.toggle;
+          const dropdownMenu = document.getElementById(dropdownMenuId);
+
+          if (dropdownMenu) {
+            dropdownMenu.classList.toggle('show');
+          }
+        })
+      })
+    }
+  }
+
   // Page load actions.
   const init = () => {
-    handleResponsiveVideos()
+    handleResponsiveVideos();
+    handleHamburgerClick();
+    handleMobileDropdownToggleClick();
   }
 
   // Scroll actions.

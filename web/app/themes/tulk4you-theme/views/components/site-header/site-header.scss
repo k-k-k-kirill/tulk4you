@@ -1,5 +1,11 @@
 /************************************ SITE HEADER *****************************************/
 
+.site-header {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 .admin-bar-showing {
   top: 48px;
 

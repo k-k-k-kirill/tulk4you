@@ -9,6 +9,8 @@
 
   &:hover,
   &:focus {
+    cursor: pointer;
+
     .nav-languages__link {
       .nav-label {
         color: $color-red !important;

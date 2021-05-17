@@ -21,16 +21,16 @@
                 } %}
             {% endif %}
 
-            {% if company_information.location %}
+            {% if company_information.display_address %}
                 {% include 'icon-link/icon-link.twig' with {
-                    url: 'https://maps.google.com/?saddr=My+Location&daddr=' ~ company_information.location.address,
-                    text: company_information.location.address,
+                    url: 'https://maps.google.com/?saddr=My+Location&daddr=' ~ company_information.display_address,
+                    text: company_information.display_address,
                     icon: 'location',
                     classes: 'hide-on-mobile mr-4'
                 } %}
             {% endif %}
 
-            {% include "nav/nav-languages.twig" %}
+            {% include "nav/nav-languages/nav-languages.twig" %}
         </div>
     </div>
 {% endif %}

@@ -77,6 +77,26 @@
                     "translations": "copy_once"
                 },
                 {
+                    "key": "field_60a298161b6ac",
+                    "label": "Display address",
+                    "name": "display_address",
+                    "type": "text",
+                    "instructions": "Write address of this company which will be displayed to user as text.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "translations": "translate"
+                },
+                {
                     "key": "field_609fa1ccaa380",
                     "label": "Location",
                     "name": "location",
@@ -115,5 +135,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1621074416
+    "modified": 1621268535
 }

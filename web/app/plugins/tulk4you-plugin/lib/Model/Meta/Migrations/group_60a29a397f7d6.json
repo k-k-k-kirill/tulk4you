@@ -118,6 +118,36 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_60a6ae76bfff0": {
+                    "key": "layout_60a6ae76bfff0",
+                    "name": "in-body-text",
+                    "label": "In-body text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60a6ae81bfff1",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "Write text content of this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "translations": "translate"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -144,5 +174,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1621269893
+    "modified": 1621536400
 }

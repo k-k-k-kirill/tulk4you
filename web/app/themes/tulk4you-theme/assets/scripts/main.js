@@ -61,7 +61,7 @@ const pixelsThemeApp = (function main() {
     });
   }
 
-  function animateValue(obj, start, end, duration) {
+  const animateValue = (obj, start, end, duration) => {
     let startTimestamp = null;
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp;

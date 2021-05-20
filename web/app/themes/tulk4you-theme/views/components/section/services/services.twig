@@ -1,0 +1,43 @@
+{% extends "section/section.twig" %}
+
+{% block section_classes %}mb-6 lg:mb-12{% endblock %}
+
+{% block section_content %}
+  {% if section.services %}
+    <div class="container">
+      <div class="section-services__content">
+        {% if section.title %}
+          <h2 class="mb-2">{{section.title}}</h2>
+        {% endif %}
+
+        {% if section.content %}
+          <div class="grid grid-cols-12 mb-6">
+            <div class="col-span-12 md:col-span-6 lg:col-span-5">
+              {{section.content}}
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="grid grid-cols-12">
+          {% for service in section.services %}
+            <div class="col-span-12 md:col-span-6 lg:col-span-4 mb-6">
+              <div class="service-card__circle mb-1"></div>
+
+              {% if service.title %}
+                <h6 class="mb-1">{{service.title}}</h6>
+              {% endif %}
+
+              {% if service.description %}
+                <p class="service-card__description mb-1">{{service.description}}</p>
+              {% endif %}
+              
+              {% if service.link %}
+                <a class="service-card__link" href="{{service.link.url}}" target="{{service.link.target}}">{{__('Read more', 'tulk4you-theme')}}</a>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>  
+    </div>
+  {% endif %}
+{% endblock %}

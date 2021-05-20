@@ -1,0 +1,35 @@
+.section-services {
+  &__content {
+    width: 100%;
+    height: 100%;
+    padding: 80px 60px 20px 60px;
+    background-color: $color-gray;
+  }
+
+  .service-card {
+    &__circle {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: $color-red;
+      border-radius: 50%;
+    }
+
+    &__description {
+      max-width: 300px;
+    }
+
+    &__link {
+      font-size: 16px;
+      line-height: 1.5;
+      color: $color-body;
+      text-decoration: underline;
+      transition: all 0.15s ease-in-out;
+
+      &:hover,
+      &:focus {
+        color: $color-red;
+      }
+    }
+  }
+}

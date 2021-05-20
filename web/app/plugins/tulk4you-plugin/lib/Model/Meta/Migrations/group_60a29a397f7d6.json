@@ -148,6 +148,133 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_60a6b295efeb2": {
+                    "key": "layout_60a6b295efeb2",
+                    "name": "services",
+                    "label": "Services",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60a6b29aefeb3",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Write title of this section here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60a6b2a3efeb4",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "Write some text content for this section here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0,
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60a6b2b8efeb5",
+                            "label": "Services",
+                            "name": "services",
+                            "type": "repeater",
+                            "instructions": "Here you can add services to this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Add Service",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60a6b305efeb6",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "text",
+                                    "instructions": "Write service title here.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "translations": "translate"
+                                },
+                                {
+                                    "key": "field_60a6b310efeb7",
+                                    "label": "Description",
+                                    "name": "description",
+                                    "type": "textarea",
+                                    "instructions": "Write description of the service here.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 4,
+                                    "new_lines": "",
+                                    "translations": "translate"
+                                },
+                                {
+                                    "key": "field_60a6b3ceefeb8",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "type": "link",
+                                    "instructions": "Define link of the service here.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "translations": "copy_once"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -174,5 +301,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1621536400
+    "modified": 1621538043
 }

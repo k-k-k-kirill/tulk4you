@@ -61,17 +61,61 @@ const pixelsThemeApp = (function main() {
     });
   }
 
+  function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start); // eslint-disable-line
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  const isElementInViewport = (element) => {
+    const position = element.getBoundingClientRect();
+
+    if (position.top >= 0 && position.bottom <= window.innerHeight) {
+      return true;
+    }
+
+    return false;
+  }
+
+  const animateStatisticsNumbers = () => {
+    const numbers = document.querySelectorAll('.js-statistics-number');
+
+    if (numbers) {
+      numbers.forEach((number) => {
+        const finalNumber = number.dataset.number;
+
+        animateValue(number, 0, finalNumber, 3000);
+      })
+    }
+  }
+
+  const handleStatisticsAnimation = () => {
+    const statisticsSection = document.querySelector('.js-statistics-section');
+
+    if (statisticsSection && isElementInViewport(statisticsSection)) {
+      animateStatisticsNumbers();
+    }
+  }
+
   // Page load actions.
   const init = () => {
     handleResponsiveVideos();
     handleHamburgerClick();
     handleMobileDropdownToggleClick();
     initHeroSlider();
+    animateStatisticsNumbers();
   }
 
   // Scroll actions.
   const scroll = () => {
-
+    handleStatisticsAnimation();
   }
 
   // Resize screen actions.

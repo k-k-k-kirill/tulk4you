@@ -1,0 +1,52 @@
+{% extends "section/section.twig" %}
+
+{% block section_classes %}mb-6 lg:mb-12 js-statistics-section{% endblock %}
+
+{% block section_content %}
+  <div class="container px-6">
+    <div class="grid grid-cols-12">
+      {% if section.content %}
+        <div class="col-span-12 lg:col-span-8 mb-8">
+          {{section.content}}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="grid grid-cols-12">
+      {% if section.translators %}
+        <div class="statistics-item mb-1 lg:mb-0 col-span-6 lg:col-span-2">
+          <span data-number="{{section.translators}}" class="h1 statistics-item__number js-statistics-number">{{section.translators}}</span>
+          <p class="statistics-item__subtitle">{{__('Translators', 'tulk4you-theme')}}</p>
+        </div>
+      {% endif %}
+
+      {% if section.languages %}
+        <div class="statistics-item mb-1 lg:mb-0 col-span-6 lg:col-span-2">
+          <span data-number="{{section.languages}}" class="h1 statistics-item__number js-statistics-number">{{section.languages}}</span>
+          <p class="statistics-item__subtitle">{{__('Languages', 'tulk4you-theme')}}</p>
+        </div>
+      {% endif %}
+
+      {% if section.clients %}
+        <div class="statistics-item mb-1 lg:mb-0 col-span-6 lg:col-span-2">
+          <div>
+            <span data-number="{{section.clients}}" class="h1 statistics-item__number js-statistics-number">{{section.clients}}</span>
+            <span class="h1">+</span>
+          </div>
+          <p class="statistics-item__subtitle">{{__('Clients', 'tulk4you-theme')}}</p>
+        </div>
+      {% endif %}
+
+      {% if section.waiting_time %}
+        <div class="statistics-item mb-1 lg:mb-0 col-span-6 lg:col-span-2">
+          <div>
+            <span class="h1">></span>
+            <span data-number="{{section.waiting_time}}" class="h1 statistics-item__number js-statistics-number">{{section.waiting_time}}</span>
+            <span class="statistics-item__minutes">{{__('Min', 'tulk4you-theme')}}</span>
+          </div>
+          <p class="statistics-item__subtitle">{{__('Clients', 'tulk4you-theme')}}</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

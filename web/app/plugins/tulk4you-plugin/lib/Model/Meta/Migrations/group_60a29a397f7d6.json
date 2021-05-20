@@ -275,6 +275,116 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_60a6beb512df7": {
+                    "key": "layout_60a6beb512df7",
+                    "name": "statistics",
+                    "label": "Statistics",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60a6bebc12df8",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "Write text content of this section here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0,
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60a6bed812df9",
+                            "label": "Translators",
+                            "name": "translators",
+                            "type": "text",
+                            "instructions": "Write amount of translators here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60a6beef12dfa",
+                            "label": "Languages",
+                            "name": "languages",
+                            "type": "text",
+                            "instructions": "Write amount of languages here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60a6befd12dfb",
+                            "label": "Clients",
+                            "name": "clients",
+                            "type": "text",
+                            "instructions": "Write amount of clients here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60a6bf1412dfc",
+                            "label": "Waiting time",
+                            "name": "waiting_time",
+                            "type": "text",
+                            "instructions": "Write amount of waiting time minutes here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "translations": "translate"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -301,5 +411,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1621538043
+    "modified": 1621540650
 }

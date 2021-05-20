@@ -1,8 +1,9 @@
-// Common
-import { makeEmbedsResponsive } from './common/video-embeds'
-
 // Imports.
 import $ from 'jquery' // eslint-disable-line
+import Swiper, { Pagination, Autoplay } from 'swiper';
+
+// Common
+import { makeEmbedsResponsive } from './common/video-embeds'
 
 const pixelsThemeApp = (function main() {
   const handleResponsiveVideos = () => {
@@ -43,11 +44,29 @@ const pixelsThemeApp = (function main() {
     }
   }
 
+  const initHeroSlider = () => {
+    Swiper.use([Pagination, Autoplay]);
+
+    return new Swiper('.js-hero-slider', {
+      direction: 'vertical',
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
+
   // Page load actions.
   const init = () => {
     handleResponsiveVideos();
     handleHamburgerClick();
     handleMobileDropdownToggleClick();
+    initHeroSlider();
   }
 
   // Scroll actions.

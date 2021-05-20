@@ -1,0 +1,150 @@
+.section-hero-slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+  padding-top: 40px;
+  min-height: calc(100vh - 149px);
+
+  @media (min-width: 768px) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 150px;
+    min-height: calc(100vh - 169px);
+  }
+
+  &__main {
+    position: relative;
+
+    &__underlay {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: -30%;
+      width: 160%;
+      height: 100%;
+
+      @media (min-width: 768px) {
+        top: -50px;
+      }
+
+      &__circle {
+        content: "";
+        height: 448px;
+        width: 448px;
+        border-radius: 50%;
+        background-color: $color-gray;
+        z-index: -1;
+        flex-shrink: unset !important;
+
+        @media (min-width: 768px) {
+          height: 546px;
+          width: 546px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin: auto;
+    max-width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    @media (min-width: 768px) {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    @media (min-width: 1024px) {
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 800px;
+    }
+  }
+
+  &__title {
+    max-width: 100%;
+    font-size: 36px;
+    line-height: 1.17;
+    display: block;
+
+    @media (min-width: 768px) {
+      font-size: 59px;
+      line-height: 1.3;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 514px;
+    }
+  }
+
+  &__link {
+    color: $color-red;
+    text-transform: lowercase;
+    font-size: 32px;
+    line-height: 1.17;
+
+    @media (min-width: 1024px) {
+      font-size: 59px;
+      line-height: 1.3;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-red;
+    }
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+
+    @media (min-width: 350px) {
+      margin-top: 170px;
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 220px;
+    }
+
+    .swiper-pagination {
+      transform: rotate(90deg);
+
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: $color-gray;
+        opacity: 1;
+
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+
+        &-active {
+          background-color: $color-red;
+        }
+      }
+    }
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 95px;
+
+  @media (min-width: 768px) {
+    height: 60px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 200%;
+    height: 80px;
+  }
+}

@@ -1,9 +1,10 @@
 /************************************ SITE HEADER *****************************************/
 
 .site-header {
+  position: fixed;
   width: 100vw;
-  height: 100vh;
-  overflow-y: scroll;
+  overflow-y: visible;
+  z-index: 9999;
 }
 
 .admin-bar-showing {

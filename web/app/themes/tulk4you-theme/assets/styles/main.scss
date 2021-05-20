@@ -1,5 +1,6 @@
 @import "reset-css";
 @import "common/variables";
+@import "~swiper/swiper-bundle";
 @import "~hamburgers/_sass/hamburgers/hamburgers.scss";
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";
@@ -37,6 +38,7 @@
 @import "../../views/components/nav/nav";
 @import "../../views/components/nav/nav-languages/nav-languages";
 @import "../../views/components/nav/nav-mobile/nav-mobile";
+@import "../../views/components/section/hero-slider/hero-slider";
 
 // ****************
 // Teaser styles

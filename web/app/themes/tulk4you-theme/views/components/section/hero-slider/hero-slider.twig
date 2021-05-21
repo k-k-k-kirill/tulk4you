@@ -15,7 +15,9 @@
           <div class="swiper-wrapper">
               {% for item in section.links %}
                 <div class="swiper-slide">
-                  <a class="h2 section-hero-slider__link" href="{{item.link.url}}" target="{{item.link.target}}">{{item.link.title}}</a>
+                  <div>
+                    <a class="h2 section-hero-slider__link" href="{{item.link.url}}" target="{{item.link.target}}">{{item.link.title}}</a>
+                  </div>
                 </div>
               {% endfor %}
           </div>

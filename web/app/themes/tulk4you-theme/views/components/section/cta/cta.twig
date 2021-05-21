@@ -1,0 +1,17 @@
+{% extends "section/section.twig" %}
+
+{% block section_classes %}mb-6 lg:mb-12{% endblock %}
+
+{% block section_content %}
+  <div class="container section-cta__container">
+    <div class="section-cta__underlay"></div>
+
+    {% if section.title %}
+      <h2 class="h1 mb-6">{{section.title}}</h2>
+    {% endif %}
+    
+    {% if section.link %}
+      <a href="{{section.link.url}}" target="{{section.link.target}}" class="btn btn--primary">{{section.link.title}}</a>
+    {% endif %}
+  </div>
+{% endblock %}

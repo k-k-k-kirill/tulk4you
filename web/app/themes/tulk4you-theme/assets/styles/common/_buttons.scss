@@ -1,22 +1,15 @@
 .btn {
   display: inline-block;
-  min-width: 120px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  font-size: 16px;
+  min-width: 180px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   transition: all 0.15s ease-in-out;
   text-align: center;
   border-radius: 0;
-  font-size: 14px;
   line-height: 1.25;
   font-weight: 700;
   text-decoration: none;
-
-  @media (min-width: 768px) {
-    font-size: 16px;
-    min-width: 180px;
-    padding-top: 17px;
-    padding-bottom: 17px;
-  }
 
   &:hover {
     color: white;
@@ -37,5 +30,19 @@
   &-secondary {
     color: white;
     background-color: $color-body;
+  }
+
+  &--mobile-shrink {
+    font-size: 14px;
+    min-width: 120px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+      min-width: 180px;
+      padding-top: 17px;
+      padding-bottom: 17px;
+    }
   }
 }

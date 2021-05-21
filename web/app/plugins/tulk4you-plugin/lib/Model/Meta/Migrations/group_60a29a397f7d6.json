@@ -385,6 +385,52 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_60a75330da7c5": {
+                    "key": "layout_60a75330da7c5",
+                    "name": "cta",
+                    "label": "CTA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60a75336da7c6",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Write section title here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60a75348da7c7",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "Define a link for this section button.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "translations": "copy_once"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -411,5 +457,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1621540650
+    "modified": 1621578612
 }

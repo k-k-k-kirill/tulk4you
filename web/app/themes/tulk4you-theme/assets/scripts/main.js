@@ -44,22 +44,20 @@ const pixelsThemeApp = (function main() {
     }
   }
 
-  const initHeroSlider = () => {
-    Swiper.use([Pagination, Autoplay, Navigation]);
+  const addSliderModules = () => Swiper.use([Pagination, Autoplay, Navigation]);
 
-    return new Swiper('.js-hero-slider', {
-      direction: 'vertical',
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  }
+  const initHeroSlider = () => new Swiper('.js-hero-slider', {
+    direction: 'vertical',
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
 
   const initReviewsSlider = () => new Swiper('.js-reviews-slider', {
     loop: true,
@@ -129,6 +127,7 @@ const pixelsThemeApp = (function main() {
     handleResponsiveVideos();
     handleHamburgerClick();
     handleMobileDropdownToggleClick();
+    addSliderModules();
     initHeroSlider();
     animateStatisticsNumbers();
     initReviewsSlider();

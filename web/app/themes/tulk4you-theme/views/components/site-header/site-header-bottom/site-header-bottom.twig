@@ -1,28 +1,30 @@
-<div class="container site-header-bottom py-3">
-  <div class="inline-flex items-center">
-    <a href="{{polylang.home}}" class="site-logo">
-      {% include 'assets/images/logo.svg' %}
-    </a>
+<div class="site-header-bottom py-3">
+  <div class="container site-header-bottom__container">
+    <div class="inline-flex items-center">
+      <a href="{{polylang.home}}" class="site-logo">
+        {% include 'assets/images/logo.svg' %}
+      </a>
 
-    {% include 'nav/nav.twig' with {
-      nav_items: menu.desktop,
-      classes: 'site-header__nav hidden lg:flex'
-    } %}
-  </div>
-
-  <div>
-    <a href="{{site.header_cta.url}}" target="{{site.header_cta.target}}" class="btn btn--primary btn--mobile-shrink">{{site.header_cta.title}}</a>
-
-    <button class="hamburger hamburger--collapse js-hamburger ml-2 lg:hidden" type="button">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
-
-    <div class="nav-mobile__container js-nav-mobile-container">
-      {% include 'nav/nav-mobile/nav-mobile.twig' with {
-        nav_items: menu.desktop
+      {% include 'nav/nav.twig' with {
+        nav_items: menu.desktop,
+        classes: 'site-header__nav hidden lg:flex'
       } %}
+    </div>
+
+    <div>
+      <a href="{{site.header_cta.url}}" target="{{site.header_cta.target}}" class="btn btn--primary btn--mobile-shrink">{{site.header_cta.title}}</a>
+
+      <button class="hamburger hamburger--collapse js-hamburger ml-2 lg:hidden" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <div class="nav-mobile__container js-nav-mobile-container">
+        {% include 'nav/nav-mobile/nav-mobile.twig' with {
+          nav_items: menu.desktop
+        } %}
+      </div>
     </div>
   </div>
 </div>

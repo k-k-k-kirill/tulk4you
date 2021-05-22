@@ -6,13 +6,13 @@
   <div class="container lg:px-6">
     <div class="grid grid-cols-12 mb-2">
         {% if section.title %}
-        <h2 class="col-span-5">{{section.title}}</h2>
+        <h2 class="col-span-12 md:col-span-5">{{section.title}}</h2>
       {% endif %}
     </div>
 
     <div class="grid grid-cols-12 mb-8">
       {% if section.content %}
-        <div class="col-span-6">
+        <div class="col-span-12 md:col-span-6">
           {{section.content}}
         </div>
       {% endif %}

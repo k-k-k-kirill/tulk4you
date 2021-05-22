@@ -1,0 +1,37 @@
+{% extends "section/section.twig" %}
+
+{% block section_classes %}mb-6 lg:mb-12{% endblock %}
+
+{% block section_content %}
+  <div class="container lg:px-6">
+    <div class="grid grid-cols-12 mb-2">
+        {% if section.title %}
+        <h2 class="col-span-5">{{section.title}}</h2>
+      {% endif %}
+    </div>
+
+    <div class="grid grid-cols-12 mb-8">
+      {% if section.content %}
+        <div class="col-span-6">
+          {{section.content}}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if section.items %}
+      <div class="grid grid-cols-12">
+        <div class="col-span-11 xl:col-span-9">
+          {% for item in section.items %}
+            <div class="numbered-list__item">
+              <div class="numbered-list__item__number">{{loop.index}}</div>
+              <div class="numbered-list__item__content">
+                <h3 class="mb-1 numbered-list__item__title">{{item.title}}</h3>
+                <p>{{item.content}}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

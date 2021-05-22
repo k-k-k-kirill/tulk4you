@@ -1,0 +1,31 @@
+{% extends "section/section.twig" %}
+
+{% block section_classes %}py-12 mb-12{% endblock %}
+
+{% block section_content %}
+  <div class="container section-reviews__circle__wrapper">
+      <div class="section-reviews__circle"></div>
+  </div>
+  <div class="container section-reviews__container">
+    {% if section.title %}
+      <h5 class="section-reviews__title mb-4 lg:mb-5">{{section.title}}</h5>
+    {% endif %}
+
+    <div class="js-reviews-slider reviews-slider">
+      <div class="swiper-wrapper">
+        {% for review in section.reviews %}
+          <div class="swiper-slide">
+            <div class="review">
+              <p class="review__content">{{review.content}}</p>
+              <p class="review__author">{{review.author}}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="flex mt-4 lg:mt-8 reviews-slider__navigation">
+        <div class="js-reviews-slider-prev mr-1 reviews-slider__arrow">{% include 'assets/images/chevron-left.svg' %}</div>
+        <div class="js-reviews-slider-next reviews-slider__arrow">{% include 'assets/images/chevron-left.svg' %}</div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

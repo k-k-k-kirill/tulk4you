@@ -1,0 +1,79 @@
+.section-reviews {
+  position: relative;
+
+  @media (min-width: 1024px) {
+    transform: translateX(100px);
+  }
+
+  &__title {
+    color: $color-body;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 1.33;
+  }
+
+  &__container {
+    overflow-x: hidden;
+  }
+
+  &__circle {
+    &__wrapper {
+      position: relative;
+      z-index: -1;
+    }
+
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50%;
+    width: 546px;
+    height: 546px;
+    background-color: $color-gray;
+    border-radius: 50%;
+
+    @media (min-width: 768px) {
+      top: -100px;
+      left: -20%;
+    }
+  }
+
+  .review {
+    &__content {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    &__author {
+      font-size: 12px;
+      line-height: 1.5;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+
+  .swiper-slide-next {
+    transition: opacity 0.15s ease-in-out;
+    opacity: 0.3;
+  }
+
+  .reviews-slider {
+    &__navigation {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__arrow {
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.3;
+      }
+
+      &:last-child {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

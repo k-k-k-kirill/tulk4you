@@ -1,6 +1,6 @@
 // Imports.
 import $ from 'jquery' // eslint-disable-line
-import Swiper, { Pagination, Autoplay } from 'swiper';
+import Swiper, { Pagination, Autoplay, Navigation } from 'swiper';
 
 // Common
 import { makeEmbedsResponsive } from './common/video-embeds'
@@ -45,7 +45,7 @@ const pixelsThemeApp = (function main() {
   }
 
   const initHeroSlider = () => {
-    Swiper.use([Pagination, Autoplay]);
+    Swiper.use([Pagination, Autoplay, Navigation]);
 
     return new Swiper('.js-hero-slider', {
       direction: 'vertical',
@@ -60,6 +60,26 @@ const pixelsThemeApp = (function main() {
       },
     });
   }
+
+  const initReviewsSlider = () => new Swiper('.js-reviews-slider', {
+    loop: true,
+    speed: 500,
+    slidesPerView: 1,
+    spaceBetween: 100,
+    autoplay: {
+      delay: 3000,
+    },
+    navigation: {
+      nextEl: '.js-reviews-slider-prev',
+      prevEl: '.js-reviews-slider-next',
+    },
+    breakpoints: {
+      1024: {
+        spaceBetween: 200,
+        slidesPerView: 2,
+      },
+    },
+  });
 
   const animateValue = (obj, start, end, duration) => {
     let startTimestamp = null;
@@ -111,6 +131,7 @@ const pixelsThemeApp = (function main() {
     handleMobileDropdownToggleClick();
     initHeroSlider();
     animateStatisticsNumbers();
+    initReviewsSlider();
   }
 
   // Scroll actions.

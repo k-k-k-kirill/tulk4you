@@ -27,6 +27,7 @@ use Pixels\Tulk4You\Repositories\Post as PostRepository;
 
 // Services
 use Pixels\Tulk4You\Services\SectionedTemplate as SectionedTemplateService;
+use Pixels\Tulk4You\Services\Blog as BlogService;
 
 /**
  * App class
@@ -127,7 +128,8 @@ final class App {
 	 * Expose them via di container.
 	 */
 	private function create_services() {
-		static::$container->set('SectionedTemplate', new SectionedTemplateService(new PostRepository()));
+		static::$container->set('SectionedTemplate', new SectionedTemplateService());
+		static::$container->set('Blog', new BlogService( new PostRepository() ));
 	}
 
 	/**

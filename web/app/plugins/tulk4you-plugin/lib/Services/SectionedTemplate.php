@@ -7,9 +7,6 @@
 
 namespace Pixels\Tulk4You\Services;
 
-// Repositories
-use Pixels\Tulk4You\Repositories\Post as PostRepository;
-
 // Contracts.
 use Pixels\Tulk4You\Services\Contracts\ServiceInterface;
 
@@ -23,53 +20,16 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Serve sectioned template related data
  */
 class SectionedTemplate implements ServiceInterface {
-	/**
-	 * Examples Repository.
-	 *
-	 * @param PostRepository;
-	 */
-	protected $postRepository;
 
-	/**
-	 * Class constructor.
-	 *
-	 * @param ExampleRepository $examples instance.
-	 */
-	public function __construct( PostRepository $postRepository ) {
-		$this->postRepository = $postRepository;
-	}
-
-  public function hasBlogFeedSection(array $templateSections): bool {
-    $hasBlogFeedSection = false;
+  public function hasSection(array $templateSections, string $sectionKey): bool {
+    $hasSection = false;
 
     foreach ( $templateSections as $section ) {
-      if ( $section['acf_fc_layout'] === 'blog-feed' ) {
-        $hasBlogFeedSection = true;
+      if ( $section['acf_fc_layout'] === $sectionKey ) {
+        $hasSection = true;
       }
     }
 
-    return $hasBlogFeedSection;
-  }
-
-  public function getPostsForBlogFeed(): array {
-    $posts = null;
-
-    $posts = $this->postsToTimberPost($this->postRepository->getNumberOfLatestPosts(3));
-  
-    return $posts;
-  }
-
-  public function getPostsArchivePermalink(): string {
-    return get_permalink( get_option( 'page_for_posts' ));
-  }
-
-  public function postsToTimberPost(array $posts): array {
-    $timberPosts = array();
-
-    foreach ($posts as $post) {
-      $timberPosts[] = new \TimberPost($post);
-    }
-
-    return $timberPosts;
+    return $hasSection;
   }
 }

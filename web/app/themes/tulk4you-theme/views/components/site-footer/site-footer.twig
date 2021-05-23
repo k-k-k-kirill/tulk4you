@@ -3,8 +3,60 @@
  #}
 
 <footer class="site-footer">
-  <section class="site-footer-content container">
+  <section class="site-footer-content">
     {% block contents %}
+      <div class="container grid grid-cols-12 overflow-x-visible">
+        <div class="col-span-12 lg:col-span-8 py-8 lg:py-12 lg:px-6">
+          {% if site.footer_options.title %}
+            <h1 class="site-footer__title mb-4">{{site.footer_options.title}}</h1>
+          {% endif %}
+          
+          {% if site.footer_options.cta %}
+            <a href="{{site.footer_options.cta.url}}" class="btn btn--primary">{{site.footer_options.cta.title}}</a>
+          {% endif %}
+        </div>
+
+        {% if site.company_information %}
+          {% set company_information = site.company_information %}
+
+          <div class="col-span-12 lg:col-span-4">
+            <div class="site-footer__contacts py-6">
+              <div class="site-footer__contacts__underlay"></div>
+              <div class="site-footer__contacts__links">
+                {% if company_information.phone %}
+                    {% include 'icon-link/icon-link.twig' with { 
+                        url: 'tel:' ~ company_information.phone,
+                        text: company_information.phone,
+                        icon: 'telephone',
+                        footer: true,
+                        classes: 'mb-2'
+                    } %}
+                {% endif %}
+
+                {% if company_information.email %}
+                    {% include 'icon-link/icon-link.twig' with {
+                        url: 'mailto:' ~ company_information.email,
+                        text: company_information.email,
+                        icon: 'email',
+                        footer: true,
+                        classes: 'mb-2'
+                    } %}
+                {% endif %}
+
+                {% if company_information.display_address %}
+                    {% include 'icon-link/icon-link.twig' with {
+                        url: 'https://maps.google.com/?saddr=My+Location&daddr=' ~ company_information.display_address,
+                        text: company_information.display_address,
+                        icon: 'location',
+                        footer: true,
+                        classes: 'mb-2'
+                    } %}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
     {% endblock %}
   </section>
   <section class="site-footer-credits container text-center">

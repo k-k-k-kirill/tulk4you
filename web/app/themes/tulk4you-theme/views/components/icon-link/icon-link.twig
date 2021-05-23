@@ -1,4 +1,4 @@
-<a href="{{url}}" target="_blank" class="icon-link {{classes}}">
+<a href="{{url}}" target="_blank" class="icon-link {{footer ? 'icon-link--footer' : ''}} {{classes}}">
     {% if icon %}
         {% include 'assets/images/' ~ icon ~ '.svg' %} 
     {% endif %}

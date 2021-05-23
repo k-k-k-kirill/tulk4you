@@ -36,4 +36,13 @@
       }
     }
   }
+
+  &--footer {
+    display: inline-flex;
+    justify-content: flex-start;
+
+    svg {
+      margin-right: 20px;
+    }
+  }
 }

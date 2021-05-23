@@ -68,6 +68,7 @@ class Context {
 		$context['site']->site_url = get_site_url(); // Since timber only returns home URL as 'link'.
 		$context['site']->company_information = get_field('company_information', 'option');
 		$context['site']->header_cta = get_field('header_cta', 'option');
+		$context['site']->footer_options = get_field('footer_options', 'option');
 
 		/**
 		 * Textdomain for translations

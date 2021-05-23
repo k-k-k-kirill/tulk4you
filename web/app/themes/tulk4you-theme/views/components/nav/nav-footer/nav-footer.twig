@@ -1,0 +1,7 @@
+{% if nav_items %}
+  <div class="nav-footer">
+    {% for item in nav_items %}
+      <a class="nav-footer__item" href="{{item.url}}" target="{{item.target}}">{{item.title}}</a>
+    {% endfor %}
+  </div>
+{% endif %}

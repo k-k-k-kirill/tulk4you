@@ -59,9 +59,31 @@
       </div>
     {% endblock %}
   </section>
-  <section class="site-footer-credits container text-center">
-    <a href="{{ privacy }}">{{ __('Privacy policy', textdomain) }}</a>
-    {{ __('&copy; %1$s %2$s.', textdomain)|format(("now"|date('Y')), 'Company') }}
-    {{ __('Crafted by <a href="https://pixels.fi" target="_blank">Pixels</a>.', textdomain) }}
+  <section class="site-footer-credits pb-4">
+    <div class="container lg:px-6">
+      <div class="grid grid-cols-12">
+        <div class="col-span-12 lg:col-span-6">
+          <a href="{{polylang.home}}" class="site-logo">
+            {% include 'assets/images/logo.svg' %}
+          </a>
+          <p class="site-footer-credits__copy hidden lg:block">
+            © 2021 Tulk4you. SIA "INTELTEKO"
+          </p>
+        </div>
+
+        {% if menu.footer %}
+          <div class="col-span-12 lg:col-span-6 flex align-items-center my-4 lg:my-0 lg:justify-end">
+            {% include 'nav/nav-footer/nav-footer.twig' with {
+              nav_items: menu.desktop,
+              classes: 'site-header__nav hidden lg:flex'
+            } %}
+          </div>
+        {% endif %}
+      </div>
+
+      <p class="site-footer-credits__copy lg:hidden">
+        © 2021 Tulk4you. SIA "INTELTEKO"
+      </p>
+    </div>
   </section>
 </footer>

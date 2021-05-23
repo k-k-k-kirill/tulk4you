@@ -51,7 +51,8 @@ const pixelsThemeApp = (function main() {
     loop: true,
     autoplay: {
       delay: 2500,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
     },
     pagination: {
       el: '.swiper-pagination',
@@ -66,6 +67,8 @@ const pixelsThemeApp = (function main() {
     spaceBetween: 100,
     autoplay: {
       delay: 3000,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
     },
     navigation: {
       nextEl: '.js-reviews-slider-prev',
@@ -75,6 +78,27 @@ const pixelsThemeApp = (function main() {
       1024: {
         spaceBetween: 200,
         slidesPerView: 2,
+      },
+    },
+  });
+
+  const initLogosSlider = () => new Swiper('.js-logos-slider', {
+    loop: true,
+    speed: 500,
+    slidesPerView: 2,
+    spaceBetween: 100,
+    height: 67,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      },
+      1024: {
+        slidesPerView: 4,
       },
     },
   });
@@ -131,6 +155,7 @@ const pixelsThemeApp = (function main() {
     initHeroSlider();
     animateStatisticsNumbers();
     initReviewsSlider();
+    initLogosSlider();
   }
 
   // Scroll actions.

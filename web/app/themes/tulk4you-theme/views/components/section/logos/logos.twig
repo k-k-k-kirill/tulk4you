@@ -1,0 +1,32 @@
+{% extends "section/section.twig" %}
+
+{% block section_classes %}mb-6 lg:mb-12{% endblock %}
+
+{% block section_content %}
+  <div class="container section-logos__container lg:px-6">
+    {% if section.title %}
+      <h4 class="mb-6">{{section.title}}</h4>
+    {% endif %}
+
+    {% if section.logos %}
+      <div class="js-logos-slider">
+          <div class="swiper-wrapper">
+            {% for item in section.logos %}
+              <div class="swiper-slide">
+                {% if item.url %}
+                  <a class="section-logos__logo" href="{{item.url}}">
+                    <img src="{{item.logo.url}}" />
+                  </a>
+                {% else %}
+                  <div class="section-logos__logo">
+                    <img src="{{item.logo.url}}" />
+                  </div>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+      </div>
+    {% endif %}
+    
+  </div>
+{% endblock %}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Class for Header Options Page.
+ * Class for Footer Options Page.
  *
  * @package Tulk4You.
  */
@@ -8,9 +8,9 @@
 namespace Pixels\Tulk4You\Admin\OptionsPages;
 
 /**
- * Register options page for footer
+ * Register options page for footer.
  */
-class HeaderOptions {
+class FooterOptions {
 
 	/**
 	 * Class constructor
@@ -18,8 +18,8 @@ class HeaderOptions {
 	public function __construct() {
 		acf_add_options_page(
 			array(
-				'page_title'  => 'Header Options',
-				'menu_title'  => 'Header Options',
+				'page_title'  => 'Footer Options',
+				'menu_title'  => 'Footer Options',
 			)
 		);
 	}

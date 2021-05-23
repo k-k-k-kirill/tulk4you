@@ -1,0 +1,77 @@
+{
+    "key": "group_60aa7c8256a01",
+    "title": "Footer Options",
+    "fields": [
+        {
+            "key": "field_60aa7c8943602",
+            "label": "Footer options",
+            "name": "footer_options",
+            "type": "group",
+            "instructions": "Here you can set site-wide footer options.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_60aa7ca543603",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "Write footer title here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "translations": "translate"
+                },
+                {
+                    "key": "field_60aa7cae43604",
+                    "label": "CTA",
+                    "name": "cta",
+                    "type": "link",
+                    "instructions": "Provide text and url for footer CTA here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "translations": "copy_once"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-footer-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1621785807
+}

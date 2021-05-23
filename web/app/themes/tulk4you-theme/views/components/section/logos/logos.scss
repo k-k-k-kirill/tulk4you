@@ -1,0 +1,28 @@
+.section-logos {
+  &__container {
+    overflow-x: hidden;
+  }
+
+  &__logo {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 67px !important;
+    width: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      filter: grayscale(100%);
+      transition: all 0.15s ease-in-out;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      img {
+        filter: grayscale(0);
+      }
+    }
+  }
+}

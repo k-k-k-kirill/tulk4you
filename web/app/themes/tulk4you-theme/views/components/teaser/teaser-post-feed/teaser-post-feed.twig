@@ -1,0 +1,9 @@
+<a href="{{post.link}}" class="teaser teaser--{{ post.type }} teaser-post-feed {{loop.last ? '' : 'mb-6'}}" id="teaser-{{ post.ID }}">
+  <h4 class="teaser-post-feed__title mb-1">{{post.title}}</h4>
+
+  <p class="teaser-post-feed__date">{{post.date('d.m.Y')}}</p>
+
+  {% if post.preview %}
+    <p class="teaser-post-feed__preview mb-1">{{post.preview.read_more('')}}</p>
+  {% endif %}
+</a>

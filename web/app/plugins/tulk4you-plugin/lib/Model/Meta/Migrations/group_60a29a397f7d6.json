@@ -633,6 +633,53 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_60aa5f1804a88": {
+                    "key": "layout_60aa5f1804a88",
+                    "name": "blog-feed",
+                    "label": "Blog feed",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60aa5f2004a89",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Write title for this section here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60aa5f2904a8a",
+                            "label": "Note",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Three latest blog posts will be displayed in this section automatically.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -659,5 +706,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1621682025
+    "modified": 1621778261
 }

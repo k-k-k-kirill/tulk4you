@@ -1,0 +1,25 @@
+{% extends "section/section.twig" %}
+
+{% block section_classes %}mb-6 lg:mb-12{% endblock %}
+
+{% block section_content %}
+  <div class="container lg:px-6">
+    <div class="grid grid-cols-12">
+      <div class="col-span-12 md:col-span-8">
+        {% if section.title %}
+          <h2 class="mb-4">{{section.title}}</h2>
+        {% endif %}
+        
+        {% if blog_feed_posts %}
+          {% for post in blog_feed_posts %}
+            {% include "teaser/teaser-post-feed/teaser-post-feed.twig" with { post: post } %}
+          {% endfor %}
+        {% endif %}
+        
+        {% if blog_archive_url %}
+          <a href="{{blog_archive_url}}" class="btn btn--primary mt-6">{{__('See all posts', 'tulk4you-theme')}}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

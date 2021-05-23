@@ -22,11 +22,11 @@ require_once __DIR__ . '/vendor/autoload.php';
 // Contracts.
 use Pixels\Tulk4You\Services\Contracts\ServiceInterface;
 
-// Repositories.
-use Pixels\Tulk4You\Repositories\Examples as ExampleRepository;
+// Repositories
+use Pixels\Tulk4You\Repositories\Post as PostRepository;
 
-// Services.
-use Pixels\Tulk4You\Services\Examples as ExampleService;
+// Services
+use Pixels\Tulk4You\Services\SectionedTemplate as SectionedTemplateService;
 
 /**
  * App class
@@ -127,13 +127,7 @@ final class App {
 	 * Expose them via di container.
 	 */
 	private function create_services() {
-		// Repositories.
-		$example_repository = new ExampleRepository();
-
-		// Services.
-		$example_service = new ExampleService( $example_repository );
-
-		static::$container->set( 'examples', $example_service );
+		static::$container->set('SectionedTemplate', new SectionedTemplateService(new PostRepository()));
 	}
 
 	/**

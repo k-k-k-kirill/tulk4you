@@ -31,6 +31,8 @@ class Images {
 		'page-hero-mobile' => array( 375, 500, true, true ),
 		'post-thumbnail'   => array( 405, 300, true, true ),
 		'related-post-thumbnail' => array( 1141, 640, true, true ),
+		'teaser-post' => array( 548, 260, true, true ),
+		'teaser-post-featured' => array( 697, 506, true, true ),
 	);
 
 	/**

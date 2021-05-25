@@ -53,11 +53,14 @@ class Post {
 			'post_status' => 'publish',
 			'posts_per_page' => 1,
 			'post__not_in' => array($currentPostId),
+			'orderby' => 'rand'
 		);
 
-		$post = get_post( $args );
+		$post = get_posts( $args );
 
-		return $post;
+		if(sizeof($post) === 0) return null;
+
+		return $post[0];
 	}
 
   public function getNumberOfLatestPosts(int $quantity = -1) : array {

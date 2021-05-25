@@ -1,0 +1,32 @@
+<div class="teaser teaser--{{ post.type }} teaser-post-featured" id="teaser-{{ post.ID }}">
+  {% if post.thumbnail %}
+    <a href="{{post.link}}" class="teaser-post-featured__image">
+      {% set image_object = post.thumbnail %}
+      {{responsive_background(image_object.id, 'post-thumbnail', 'teaser-post-featured', '.teaser-post-featured__image')}}
+    </a>
+
+    <a href="{{post.link}}" class="md:hidden">
+      {{responsive_image(image_object.id, 'post-thumbnail', 'post-thumbnail', image_object.alt)}}
+    </a>
+  {% endif %}
+  
+  <div class="container md:px-6">
+    <div class="grid grid-cols-12">
+      {% if post.thumbnail %}
+        <div class="col-span-12 md:col-span-6"></div>
+      {% endif %}
+
+      <div class="col-span-12 md:col-span-6">
+        <div class="teaser-post-featured__content">
+          <a href="{{post.link}}" class="teaser-post-featured__title mb-4 h2">{{post.title}}</a>
+
+          {% if post.preview %}
+            <p class="teaser-post-featured__preview mb-8">{{post.preview.read_more('')}}</p>
+          {% endif %}
+
+          <a href="{{post.link}}" class="btn btn--primary">{{__('Read more', 'tulk4you-theme')}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

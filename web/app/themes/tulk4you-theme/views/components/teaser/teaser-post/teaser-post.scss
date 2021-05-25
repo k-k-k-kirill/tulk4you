@@ -1,0 +1,31 @@
+.teaser-post {
+  display: block;
+  width: 100;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &:hover {
+    .teaser-post__title {
+      color: $color-red;
+    }
+  }
+
+  &__date {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    color: $color-body;
+  }
+
+  &__title {
+    color: $color-body;
+    transition: all 0.15s ease-in-out;
+  }
+
+  &__preview {
+    color: $color-body;
+  }
+}

@@ -1,0 +1,14 @@
+<a href="{{post.link}}" class="teaser teaser--{{ post.type }} teaser-post {{loop.last ? '' : 'mb-6'}}" id="teaser-{{ post.ID }}">
+  {% if post.thumbnail %}
+    {% set image_object = TimberImage(post.thumbnail) %}
+    {{responsive_image(image_object.id, 'teaser-post', 'teaser-post', image_object.alt)}}
+  {% endif %}
+
+  <p class="teaser-post__date my-2">{{post.date('d.m.Y')}}</p>
+
+  <h4 class="teaser-post__title mb-1">{{post.title}}</h4>
+
+  {% if post.preview %}
+    <p class="teaser-post__preview mb-1">{{post.preview.read_more('')}}</p>
+  {% endif %}
+</a>

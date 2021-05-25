@@ -1,0 +1,39 @@
+.teaser-post-featured {
+  position: relative;
+  min-height: 506px;
+  background-color: $color-gray;
+
+  &__title {
+    color: $color-body;
+    transition: all 0.15s ease-in-out;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 506px;
+
+    @media (min-width: 1280px) {
+      max-width: 600px;
+    }
+  }
+
+  &__image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(50vw - 40px);
+    height: 100%;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+}

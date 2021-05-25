@@ -6,7 +6,7 @@
   <section class="site-footer-content">
     {% block contents %}
       <div class="container grid grid-cols-12 overflow-x-visible">
-        <div class="col-span-12 lg:col-span-8 py-8 lg:py-12 lg:px-6">
+        <div class="col-span-12 lg:col-span-9 py-8 lg:py-12 md:px-6">
           {% if site.footer_options.title %}
             <h1 class="site-footer__title mb-4">{{site.footer_options.title}}</h1>
           {% endif %}
@@ -19,8 +19,8 @@
         {% if site.company_information %}
           {% set company_information = site.company_information %}
 
-          <div class="col-span-12 lg:col-span-4">
-            <div class="site-footer__contacts py-6">
+          <div class="col-span-12 lg:col-span-3">
+            <div class="site-footer__contacts py-6 md:px-6">
               <div class="site-footer__contacts__underlay"></div>
               <div class="site-footer__contacts__links">
                 {% if company_information.phone %}
@@ -60,7 +60,7 @@
     {% endblock %}
   </section>
   <section class="site-footer-credits pb-4">
-    <div class="container lg:px-6">
+    <div class="container md:px-6">
       <div class="grid grid-cols-12">
         <div class="col-span-12 lg:col-span-6">
           <a href="{{polylang.home}}" class="site-logo">

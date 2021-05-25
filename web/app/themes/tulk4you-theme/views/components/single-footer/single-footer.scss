@@ -1,0 +1,36 @@
+.single-footer {
+  &__form {
+    position: relative;
+    background-color: $color-gray;
+
+    &__title {
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -13px;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: $color-red;
+        z-index: -1;
+      }
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 1000vw;
+      background-color: $color-gray;
+      z-index: -10;
+    }
+  }
+}

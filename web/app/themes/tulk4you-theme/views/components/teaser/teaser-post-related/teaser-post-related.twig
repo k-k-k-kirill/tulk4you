@@ -1,0 +1,30 @@
+<div class="teaser teaser--{{ post.type }} teaser-post-related {{loop.last ? '' : 'mb-6'}} md:py-6" id="teaser-{{ post.ID }}">
+  {% if post.thumbnail %}
+    <div class="teaser-post-related__image"></div>
+    {{responsive_background( TimberImage(post.thumbnail).id, 'page-hero-mobile', 'related-post-thumbnail', '.teaser-post-related__image' )}}
+  {% endif %}
+
+  {% if post.thumbnail %}
+    <a href="{{post.link}}" class="md:hidden mb-3">
+      {% set image_object = TimberImage(post.thumbnail) %}
+      {{responsive_image(image_object.id, 'post-thumbnail', 'post-thumbnail', image_object.alt)}}
+    </a>
+  {% endif %}
+
+  <div class="container md:px-6 teaser-post-related__container">
+    <div class="grid grid-cols-12">
+      <div class="col-span-12 md:col-span-11 lg:col-span-9 teaser-post-related__content py-3 md:py-6">
+        <div class="teaser-post-related__text">
+          <p class="teaser-post-related__subtitle mb-1">{{__('Read also','tulk4you-theme')}}</p>
+          <a href="{{post.link}}" class="h1 mb-4 teaser-post-related__title">{{post.title}}</a>
+
+          {% if post.preview %}
+            <p class="mb-6">{{post.preview.read_more('')}}</p>
+          {% endif %}
+        </div>
+
+        <a href="{{post.link}}" class="btn btn--primary">{{__('Read more','tulk4you-theme')}}</a>
+      </div>
+    </div>
+  </div>
+</div>

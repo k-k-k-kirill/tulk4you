@@ -29,6 +29,8 @@ class Images {
 	const SIZES = array(
 		'page-hero'        => array( 1100, 500, true, true ),
 		'page-hero-mobile' => array( 375, 500, true, true ),
+		'post-thumbnail'   => array( 405, 300, true, true ),
+		'related-post-thumbnail' => array( 1141, 640, true, true ),
 	);
 
 	/**

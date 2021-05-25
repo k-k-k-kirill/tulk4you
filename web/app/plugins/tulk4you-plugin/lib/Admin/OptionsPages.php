@@ -10,6 +10,7 @@ namespace Pixels\Tulk4You\Admin;
 use Pixels\Tulk4You\Admin\OptionsPages\CompanyInformation;
 use Pixels\Tulk4You\Admin\OptionsPages\HeaderOptions;
 use Pixels\Tulk4You\Admin\OptionsPages\FooterOptions;
+use Pixels\Tulk4You\Admin\OptionsPages\BlogOptions;
 
 /**
  * Instantiates individual options pages
@@ -33,9 +34,16 @@ class OptionsPages {
 	/**
 	 * Footer options page.
 	 *
-	 * @var HeaderOptions
+	 * @var FooterOptions
 	 */
 	private $footer_options;
+
+	/**
+	 * Blog options page.
+	 *
+	 * @var BlogOptions
+	 */
+	private $blog_options;
 
 	/**
 	 * Class constructor
@@ -57,5 +65,6 @@ class OptionsPages {
 		$this->company_information = new OptionsPages\CompanyInformation();
 		$this->header_options = new OptionsPages\HeaderOptions();
 		$this->footer_options = new OptionsPages\FooterOptions();
+		$this->blog_options = new OptionsPages\BlogOptions();
 	}
 }

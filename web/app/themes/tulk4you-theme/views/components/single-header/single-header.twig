@@ -6,6 +6,23 @@
  # @var post	The Timber Post object.
  #}
 
-<header class="single-header single-header--{{ post.type }}">
-  <h1 class="single-title single-title--{{ post.type }}">{{ post.title }}</h1>
+<header class="single-header single-header--{{ post.type }} mb-8">
+  <div class="container">
+    <div class="grid grid-cols-12 md:px-6 lg:py-8">
+      <div class="col-span-12 lg:col-span-8 flex flex-col justify-center order-last lg:order-none">
+        <h1 class="single-title single-title--{{ post.type }}">{{ post.title }}</h1>
+        <div class="single-header__date mt-2">
+          {{post.date('d.m.Y')}}
+        </div>
+      </div>
+
+      {% if post.thumbnail %}
+        <div class="col-span-12 lg:col-span-4 mb-4 lg:mb-0">
+          {% set image_object = TimberImage(post.thumbnail) %}
+          {{responsive_image(image_object.id, 'post-thumbnail', 'post-thumbnail', image_object.alt)}}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
 </header>

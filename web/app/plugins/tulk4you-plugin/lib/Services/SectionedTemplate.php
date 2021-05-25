@@ -21,7 +21,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class SectionedTemplate implements ServiceInterface {
 
-  public function hasSection(array $templateSections, string $sectionKey): bool {
+  public function hasSection($templateSections, string $sectionKey): bool {
+    if(!$templateSections) {
+      return false;
+    }
+
     $hasSection = false;
 
     foreach ( $templateSections as $section ) {

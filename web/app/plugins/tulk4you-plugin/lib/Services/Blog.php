@@ -55,9 +55,21 @@ class Blog implements ServiceInterface {
     $timberPosts = array();
 
     foreach ($posts as $post) {
-      $timberPosts[] = new \TimberPost($post);
+      $timberPosts[] = $this->onePostToTimberPost($post);
     }
 
     return $timberPosts;
+  }
+
+  public function onePostToTimberPost( \WP_Post $post ): \TimberPost {
+    return new \TimberPost($post);
+  }
+
+  public function getRelatedPost( int $currentPostId ): ?\TimberPost {
+    $post = $this->postRepository->getRelatedPost($currentPostId);
+
+    if (!$post) return null;
+    
+    return $this->onePostToTimberPost($post);
   }
 }

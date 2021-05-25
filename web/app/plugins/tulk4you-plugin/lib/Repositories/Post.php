@@ -47,6 +47,19 @@ class Post {
 		return get_post( $id );
 	}
 
+	public function getRelatedPost( int $currentPostId ): ?\WP_Post {
+		$args = array(
+			'post_type' => self::POST_TYPE,
+			'post_status' => 'publish',
+			'posts_per_page' => 1,
+			'post__not_in' => array($currentPostId),
+		);
+
+		$post = get_post( $args );
+
+		return $post;
+	}
+
   public function getNumberOfLatestPosts(int $quantity = -1) : array {
     $args = array(
       'post_type' => self::POST_TYPE,

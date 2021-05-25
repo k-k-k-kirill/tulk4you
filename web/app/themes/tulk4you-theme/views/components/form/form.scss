@@ -26,3 +26,40 @@
 .search-form .search-submit {
   @extend .btn;
 }
+
+.contact-form {
+  &__label {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+  }
+
+  &__input,
+  &__date {
+    background-color: transparent;
+    border: 1px solid $color-body;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  &__comment {
+    background-color: transparent;
+    border: 1px solid $color-body;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  &__group {
+    margin-bottom: 40px;
+  }
+
+  &__required {
+    color: $color-red;
+  }
+}

@@ -1,0 +1,67 @@
+{
+    "key": "group_60ac1223324e1",
+    "title": "Blog Options",
+    "fields": [
+        {
+            "key": "field_60ad34026bab2",
+            "label": "Blog form title",
+            "name": "blog_form_title",
+            "type": "text",
+            "instructions": "Write title for the blog contact form here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "translations": "translate"
+        },
+        {
+            "key": "field_60ac122d68323",
+            "label": "Blog contact form",
+            "name": "blog_contact_form",
+            "type": "post_object",
+            "instructions": "Select contact form to be displayed in each single post.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "wpcf7_contact_form"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "translations": "copy_once",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-blog-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1621963803
+}

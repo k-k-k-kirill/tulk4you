@@ -6,6 +6,10 @@
   &__title {
     color: $color-body;
     transition: all 0.15s ease-in-out;
+
+    &:hover {
+      color: $color-red;
+    }
   }
 
   &__content {

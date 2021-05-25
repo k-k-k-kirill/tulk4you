@@ -12,7 +12,7 @@
     <ul class="pagination__list {{ classes }}">
       {% if pagination.prev %}
         <li class="pagination__list-item {{ pagination.prev.link|length ?: 'disabled' }}">
-          <a class="pagination__link" href="{{ pagination.prev.link }}" {{ pagination.prev.link|length ?: 'tabindex="-1"' }}>{{ __('Previous', textdomain) }}</a>
+          <a class="pagination__link" href="{{ pagination.prev.link }}" {{ pagination.prev.link|length ?: 'tabindex="-1"' }}>{% include "assets/images/chevron-left.svg" %}</a>
         </li>
       {% endif %}
       {% for page in pagination.pages %}
@@ -22,7 +22,7 @@
       {% endfor %}
       {% if pagination.next %}
         <li class="pagination__list-item {{ pagination.next.link|length ?: 'disabled' }}">
-          <a class="pagination__link" href="{{ pagination.next.link }}" {{ pagination.next.link|length ?: 'tabindex="-1"' }}>{{ __('Next', textdomain) }}</a>
+          <a class="pagination__link pagination__link--next" href="{{ pagination.next.link }}" {{ pagination.next.link|length ?: 'tabindex="-1"' }}>{% include "assets/images/chevron-left.svg" %}</a>
         </li>
       {% endif %}
     </ul>

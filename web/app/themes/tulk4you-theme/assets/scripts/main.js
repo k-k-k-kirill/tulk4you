@@ -146,6 +146,22 @@ const pixelsThemeApp = (function main() {
     }
   }
 
+  const setBackgroundCircleDimensions = () => {
+    const circle = document.querySelector('.js-form-background-circle');
+
+    if (circle) {
+      const mainElement = document.querySelector('main');
+      const siteFooter = document.querySelector('.site-footer');
+
+      if (mainElement && siteFooter) {
+        const size = mainElement.clientHeight + siteFooter.clientHeight;
+
+        circle.style.height = `${size}px`;
+        circle.style.width = `${size}px`;
+      }
+    }
+  }
+
   // Page load actions.
   const init = () => {
     handleResponsiveVideos();
@@ -156,6 +172,7 @@ const pixelsThemeApp = (function main() {
     animateStatisticsNumbers();
     initReviewsSlider();
     initLogosSlider();
+    setBackgroundCircleDimensions();
   }
 
   // Scroll actions.
@@ -165,7 +182,7 @@ const pixelsThemeApp = (function main() {
 
   // Resize screen actions.
   const resize = () => {
-
+    setBackgroundCircleDimensions();
   }
 
   // Exports to DOM binds.

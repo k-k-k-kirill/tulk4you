@@ -1,0 +1,47 @@
+{
+    "key": "group_60afc6fde2d31",
+    "title": "Form Page Options",
+    "fields": [
+        {
+            "key": "field_60afc742c4d59",
+            "label": "Form page contact form",
+            "name": "form_page_contact_form",
+            "type": "post_object",
+            "instructions": "Select contact form to be displayed in this page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "wpcf7_contact_form"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "translations": "copy_once",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "controllers\/template-form-page.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1622132600
+}

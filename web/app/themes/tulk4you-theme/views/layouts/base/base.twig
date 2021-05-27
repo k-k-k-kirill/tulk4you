@@ -13,7 +13,7 @@
 		</head>
   {% endblock %}
 
-  <body class="{{ body_class }}">
+  <body class="{{ body_class }} {% block body_classes %}{% endblock %}">
     {{ function('wp_body_open') }}
 
     {% block site_body %}
@@ -22,7 +22,7 @@
         {% include 'site-header/site-header.twig' %}
       {% endblock %}
 
-      <main class="header-margin" role="main">
+      <main class="header-margin {% block main_class %}{% endblock %}" role="main">
         {% block site_content %}
           {{ __('Sorry, no content was found!', textdomain) }}
         {% endblock %}

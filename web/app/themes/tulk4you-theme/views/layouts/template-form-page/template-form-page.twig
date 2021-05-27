@@ -1,0 +1,43 @@
+{% extends "base/base.twig" %}
+
+{% block main_class %}with-background-circle{% endblock %}
+
+{% block site_content %}
+  <div class="template-form-page">
+    <div class="template-form-page__circle js-form-background-circle"></div>
+      <div class="container md:px-6 py-6 lg:py-12 template-form-page__container">
+        <div class="grid grid-cols-12 mb-6">
+          <div class="col-span-12 lg:col-span-4">
+            <h1>{{post.title}}</h1>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-12">
+          <div class="col-span-12 lg:col-span-4 mb-6">
+            {% if post.content %}
+              <div class="mb-4 lead">{{post.content}}</div>
+            {% endif %}
+
+            {% if site.company_information.phone %}
+              <div>
+                <h6 class="mb-1">{{__('Phone', 'tulk4you-theme')}}:</h6>
+                <a class="link" href="tel:{{site.company_information.phone}}">{{site.company_information.phone}}</a>
+              </div>
+            {% endif %}
+
+            {% if site.company_information.email %}
+              <div class="mt-4">
+                <h6 class="mb-1">{{__('E-mail', 'tulk4you-theme')}}:</h6>
+                <a class="link" href="mailto:{{site.company_information.email}}">{{site.company_information.email}}</a>
+              </div>
+            {% endif %}
+          </div>
+          <div class="col-span-12 lg:col-span-5 lg:col-start-7">
+            {% filter shortcodes %}
+              [contact-form-7 id="{{contact_form.ID}}"]
+            {% endfilter %}
+          </div>
+        </div>
+    </div>
+  </div>
+{% endblock %}

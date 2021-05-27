@@ -1,0 +1,25 @@
+.page-template-template-form-page {
+  .site-footer-content {
+    display: none;
+  }
+}
+
+.template-form-page {
+  position: relative;
+
+  &__container {
+    position: relative;
+  }
+
+  &__circle {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10%;
+    background-color: $color-gray;
+    border-radius: 50%;
+    z-index: -1;
+    height: 0;
+    width: 0;
+  }
+}

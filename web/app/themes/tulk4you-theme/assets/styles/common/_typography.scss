@@ -207,3 +207,13 @@ h6,
     font-weight: $h6-font-weight;
   }
 }
+
+.link {
+  color: $color-body;
+  transition: all 0.15s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $color-red;
+  }
+}

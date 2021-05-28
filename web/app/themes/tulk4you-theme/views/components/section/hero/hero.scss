@@ -1,0 +1,21 @@
+.section-hero {
+  position: relative;
+
+  &__circle {
+    content: "";
+    width: 446px;
+    height: 446px;
+    position: absolute;
+    top: 0;
+    left: -40%;
+    border-radius: 50%;
+    background-color: $color-gray;
+    z-index: -1;
+
+    @media (min-width: 768px) {
+      width: 546px;
+      height: 546px;
+      left: -5%;
+    }
+  }
+}

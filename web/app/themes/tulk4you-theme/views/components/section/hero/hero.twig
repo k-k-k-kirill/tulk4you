@@ -1,0 +1,24 @@
+{% extends "section/section.twig" %}
+
+{% block section_classes %}py-6 lg:py-12 mt-6 lg:mt-12 mb-6 md:mb-12{% endblock %}
+
+{% block section_content %}
+  <div class="section-hero__circle"></div>
+  <div class="container md:px-6">
+    <div class="grid grid-cols-12">
+      <div class="col-span-12 md:col-span-8 xl:col-span-6">
+        {% if section.title %}
+          <h1 class="mb-1">{{section.title}}</h1>
+        {% endif %}
+
+        {% if section.content %}
+          <div class="mb-4">{{section.content}}</div>
+        {% endif %}
+          
+        {% if section.link %}
+          <a class="btn btn--secondary" href="{{section.link.url}}" target="{{section.link.target}}">{{section.link.title}}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

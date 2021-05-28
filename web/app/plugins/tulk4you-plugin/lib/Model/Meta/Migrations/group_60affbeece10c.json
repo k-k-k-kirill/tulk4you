@@ -1,0 +1,79 @@
+{
+    "key": "group_60affbeece10c",
+    "title": "Contact Page Options",
+    "fields": [
+        {
+            "key": "field_60affc05a45cf",
+            "label": "CTA",
+            "name": "contact_page_cta",
+            "type": "group",
+            "instructions": "Here you can define CTA section of the contact page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_60affc43a45d0",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "Write CTA title here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "translations": "translate"
+                },
+                {
+                    "key": "field_60affc4ca45d1",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "Provide text and URL for CTA link here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "translations": "copy_once"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "controllers\/template-contact-page.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1622146160
+}

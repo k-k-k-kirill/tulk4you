@@ -7,6 +7,7 @@
  */
 
 namespace Pixels\Theme;
+use function Env\env;
 
 /**
  * Assets class
@@ -56,6 +57,12 @@ class Assets {
 		// Enqueue main scripts / styles.
 		wp_enqueue_style( 'pixels/main.css', $this->get_asset_uri( 'styles/main.scss' ), false, null );
 		wp_enqueue_script( 'pixels/main.js', $this->get_asset_uri( 'scripts/main.js' ), array( 'jquery' ), null, true );
+
+		$googleMapsApiKey = env('GOOGLE_API_KEY');
+
+		if (isset($googleMapsApiKey)) {
+			wp_enqueue_script( 'google/maps', '//maps.googleapis.com/maps/api/js?key=' . $googleMapsApiKey . '&libraries=&v=weekly', array(), false, true );
+		}
 
 		// Add variables to enqueued script.
 		$this->localize_variables();

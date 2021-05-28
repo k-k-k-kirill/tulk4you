@@ -114,6 +114,46 @@
                     "zoom": "",
                     "height": "",
                     "translations": "copy_once"
+                },
+                {
+                    "key": "field_60affeeccd88b",
+                    "label": "Registration number",
+                    "name": "registration_number",
+                    "type": "text",
+                    "instructions": "Write registration number of the company here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "translations": "translate"
+                },
+                {
+                    "key": "field_60afff8088e43",
+                    "label": "Official name",
+                    "name": "official_name",
+                    "type": "text",
+                    "instructions": "Write company's official name here.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "translations": "translate"
                 }
             ]
         }
@@ -135,5 +175,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1621268535
+    "modified": 1622146963
 }

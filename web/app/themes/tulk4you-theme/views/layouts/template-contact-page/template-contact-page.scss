@@ -1,0 +1,30 @@
+.template-contact-page {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: 1024px) {
+      height: 631px;
+    }
+  }
+
+  &__map {
+    height: 400px;
+    width: 100vw;
+
+    @media (min-width: 1024px) {
+      position: absolute;
+      height: 631px;
+      width: 50vw;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.page-template-template-contact-page {
+  .site-footer-content {
+    display: none;
+  }
+}

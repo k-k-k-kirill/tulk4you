@@ -119,6 +119,72 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_60b0dac5eabaa": {
+                    "key": "layout_60b0dac5eabaa",
+                    "name": "hero",
+                    "label": "Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60b0daf2eabab",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Write title for this section here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60b0db00eabac",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "Write text content of this section here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60b0db0eeabad",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "Provide text and URL for this section's link.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "translations": "copy_once"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_60a6ae76bfff0": {
                     "key": "layout_60a6ae76bfff0",
                     "name": "in-body-text",
@@ -799,5 +865,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1621781191
+    "modified": 1622203177
 }

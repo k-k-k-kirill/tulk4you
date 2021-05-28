@@ -7,7 +7,11 @@
 
   &__container {
     position: relative;
-    padding: 120px 60px;
+    padding: 60px;
+
+    @media (min-width: 768px) {
+      padding: 120px 60px;
+    }
   }
 
   &__underlay {

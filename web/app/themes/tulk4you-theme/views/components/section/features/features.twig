@@ -1,0 +1,28 @@
+{% extends "section/section.twig" %}
+
+{% block section_classes %}mb-6 md:mb-12{% endblock %}
+
+{% block section_content %}
+  <div class="container md:px-6">
+    <div class="grid grid-cols-12">
+      <div class="col-span-12 lg:col-span-6 mb-4 lg:mb-0">
+        {% if section.title %}
+          <h2 class="mb-2">{{section.title}}</h2>
+        {% endif %}
+
+        {% if section.content %}
+          <div>{{section.content}}</div>
+        {% endif %}
+      </div>
+
+      {% if section.secondary_content %}
+        <div class="col-span-12 lg:col-span-4 lg:col-start-8">
+          <div class="section-features__secondary-content">
+            <div class="section-features__secondary-content__underlay"></div>
+            <div>{{section.secondary_content}}</div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

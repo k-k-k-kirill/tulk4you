@@ -1,0 +1,33 @@
+{% extends "section/section.twig" %}
+
+{% block section_classes %}md:py-6 mb-6 md:mb-12{% endblock %}
+
+{% block section_content %}
+  {% if section.image %}
+    <div class="section-image-cta__image"></div>
+    {{responsive_background( TimberImage(section.image).id, 'page-hero-mobile', 'related-post-thumbnail', '.section-image-cta__image' )}}
+  {% endif %}
+
+  {% if section.image %}
+    <div class="md:hidden mb-3">
+      {% set image_object = TimberImage(section.image) %}
+      {{responsive_image(image_object.id, 'post-thumbnail', 'post-thumbnail', image_object.alt)}}
+    </div>
+  {% endif %}
+
+  <div class="container md:px-6 section-image-cta__container">
+    <div class="grid grid-cols-12">
+      <div class="col-span-12 md:col-span-11 lg:col-span-7 section-image-cta__content py-3 md:py-6">
+        <div class="section-image-cta__text">
+          <h2 class="h1 mb-4 section-image-cta__title">{{section.title}}</h2>
+
+          {% if section.content %}
+            <div class="mb-6">{{section.content}}</div>
+          {% endif %}
+        </div>
+
+        <a href="{{section.link.url}}" target="{{section.link.target}}" class="btn btn--primary">{{section.link.title}}</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

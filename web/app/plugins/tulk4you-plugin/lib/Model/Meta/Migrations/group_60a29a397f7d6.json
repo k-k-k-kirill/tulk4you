@@ -498,6 +498,97 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_60b0e886d8800": {
+                    "key": "layout_60b0e886d8800",
+                    "name": "image-cta",
+                    "label": "Image CTA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60b0e88ed8801",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "Upload image for this section here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "translations": "copy_once"
+                        },
+                        {
+                            "key": "field_60b0e89fd8802",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Write title of this section here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60b0e8e66b172",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "Write content of this section here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60b0e8add8803",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "Provide text and URL for this section's link.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "translations": "copy_once"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_60a75c4d15fb1": {
                     "key": "layout_60a75c4d15fb1",
                     "name": "reviews",
@@ -700,6 +791,76 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_60b0eca71ea89": {
+                    "key": "layout_60b0eca71ea89",
+                    "name": "features",
+                    "label": "Features",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60b0ecaf1ea8a",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Write title of this section here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60b0ecba1ea8b",
+                            "label": "Content",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "Write text content of this section here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "translations": "translate"
+                        },
+                        {
+                            "key": "field_60b0ecc61ea8c",
+                            "label": "Secondary content",
+                            "name": "secondary_content",
+                            "type": "wysiwyg",
+                            "instructions": "Write secondary content of this section here.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "translations": "translate"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_60aa5f1804a88": {
                     "key": "layout_60aa5f1804a88",
                     "name": "blog-feed",
@@ -865,5 +1026,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1622203177
+    "modified": 1622207709
 }

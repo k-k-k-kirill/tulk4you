@@ -5,9 +5,11 @@
 {% extends 'base/base.twig' %}
 
 {% block site_content %}
-	<h1>{{ title }}</h1>
+	<div class="container py-6 md:py-12 md:px-6">
+		<h1 class="mb-2">404</h1>
 
-	<div class="single-body single-body-{{ post.post_type }}">
-		{{ __('Sorry, we couldn\'t find what you\'re looking for.', textdomain) }}
+		<div class="single-body single-body-{{ post.post_type }}">
+			{{ __('Sorry, we couldn\'t find what you\'re looking for.', textdomain) }}
+		</div>
 	</div>
 {% endblock %}

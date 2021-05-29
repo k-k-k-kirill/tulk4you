@@ -1,4 +1,10 @@
 .section-features {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__secondary-content {
     height: 100%;
     display: flex;

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba1659623ff75e6e8bf5e344a4a41104",
+    "content-hash": "7f2356987366b02c1b87289a6afb0229",
     "packages": [
         {
             "name": "composer/installers",
@@ -810,6 +810,24 @@
                 "environment"
             ],
             "time": "2021-01-20T15:23:13+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/acf-options-for-polylang",
+            "version": "1.1.10",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/acf-options-for-polylang/",
+                "reference": "tags/1.1.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/acf-options-for-polylang.1.1.10.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/acf-options-for-polylang/"
         },
         {
             "name": "wpackagist-plugin/classic-editor",

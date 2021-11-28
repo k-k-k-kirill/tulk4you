@@ -70,7 +70,7 @@
         - 'echo "Linking uploads of current revision: $BUDDY_EXECUTION_REVISION"'
         - "mkdir -p shared/uploads"
         - "rm -rf releases/$BUDDY_EXECUTION_REVISION/web/uploads"
-        - "ln -s releases/$BUDDY_EXECUTION_REVISION/web/uploads shared/uploads"
+        - "ln -s shared/uploads releases/$BUDDY_EXECUTION_REVISION/web/uploads"
         - ""
         - 'echo "Removing old releases"'
         - "cd releases && ls -t | tail -n +11 | xargs rm -rf"

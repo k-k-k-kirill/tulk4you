@@ -7,8 +7,8 @@
 	{% if section.image %}
 		{% set image_object = TimberImage(section.image) %}
 		<div id="section-image-{{section.id}}" class="section-image-cta__image"></div>
-		{{responsive_background( image_object.id, 'page-hero-mobile', 'related-post-thumbnail', '#section-image-' ~ {{section.id}}
-		)}}
+		{% set selector = '#section-image-' ~ section.id %}
+		{{responsive_background( image_object.id, 'page-hero-mobile', 'related-post-thumbnail', selector )}}
 
 		<div class="md:hidden mb-3">
 			{{responsive_image(image_object.id, 'post-thumbnail', 'post-thumbnail', image_object.alt)}}

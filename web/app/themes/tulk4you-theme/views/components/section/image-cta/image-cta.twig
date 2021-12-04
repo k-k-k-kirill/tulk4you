@@ -5,7 +5,7 @@
 
 {% block section_content %}
 	{% if section.image %}
-		{% set image_object = TimberImage(section.image) %}
+		{% set image_object = TimberImage(section.image.id) %}
 		<div id="section-image-{{image_object.id}}" class="section-image-cta__image"></div>
 		{% set selector = '#section-image-' ~ image_object.id %}
 		{{responsive_background( image_object.id, 'page-hero-mobile', 'related-post-thumbnail', selector )}}

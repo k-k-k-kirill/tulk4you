@@ -12,6 +12,7 @@ web/app/plugins/*
 !web/app/plugins/advanced-custom-fields-pro
 !web/app/plugins/polylang-pro
 !web/app/plugins/tulk4you-plugin
+!web/app/plugins/all-in-one-seo-pack-pro
 
 # WordPress
 web/wp

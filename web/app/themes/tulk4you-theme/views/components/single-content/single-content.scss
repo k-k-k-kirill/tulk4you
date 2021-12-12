@@ -5,4 +5,8 @@
 // Prevent floated content slipping into the next section
 .single-content {
   overflow: hidden;
+
+  ul {
+    @extend .fancy-list;
+  }
 }

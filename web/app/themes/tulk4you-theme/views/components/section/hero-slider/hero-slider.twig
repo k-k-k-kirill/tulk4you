@@ -1,45 +1,45 @@
 {% extends "section/section.twig" %}
 
 {% block section_content %}
-  <div class="section-hero-slider__content">
-    <div class="section-hero-slider__main__underlay">
-      <div class="section-hero-slider__main__underlay__circle"></div>
-    </div>
-    <div class="section-hero-slider__main">
-      {% if section.title %}
-        <h1 class="section-hero-slider__title">{{section.title}}</h1>
-      {% endif %}
+	<div class="section-hero-slider__content">
+		<div class="section-hero-slider__main__underlay">
+			<div class="section-hero-slider__main__underlay__circle"></div>
+		</div>
+		<div class="section-hero-slider__main">
+			{% if section.title %}
+				<h1 class="section-hero-slider__title">{{section.title}}</h1>
+			{% endif %}
 
-      {% if section.links %}
-        <div class="section-hero-slider__slider swiper-container js-hero-slider mb-2 lg:mb-2">
-          <div class="swiper-wrapper">
-              {% for item in section.links %}
-                <div class="swiper-slide">
-                  <div>
-                    <a class="h2 section-hero-slider__link" href="{{item.link.url}}" target="{{item.link.target}}">{{item.link.title}}</a>
-                  </div>
-                </div>
-              {% endfor %}
-          </div>
-        </div>
-      {% endif %}
-      
-      {% if section.content %}
-        <div class="mb-4 lead">
-          {{section.content}}
-        </div>
-      {% endif %}
+			{% if section.links %}
+				<div class="section-hero-slider__slider swiper-container js-hero-slider mb-2 lg:mb-2">
+					<div class="swiper-wrapper">
+						{% for item in section.links %}
+							<div class="swiper-slide">
+								<div>
+									<a class="h2 section-hero-slider__link" href="{{item.link.url}}" target="{{item.link.target}}">{{item.link.title}}</a>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
 
-      {% if section.cta %}
-        <div class="flex lg:justify-end lg:mr-12">
-          <a class="btn btn--secondary" href="{{section.cta.url}}" target="{{section.cta.target}}">{{section.cta.title}}</a>
-        </div>
-      {% endif %}
-      
-    </div>
+			{% if section.content %}
+				<div class="mb-4 lead">
+					{{section.content}}
+				</div>
+			{% endif %}
 
-    <div class="section-hero-slider__dots">
-        <div class="swiper-pagination"></div>
-    </div>
-  </div>
+			{% if section.cta %}
+				<div class="flex lg:justify-end lg:mr-12">
+					<a class="btn btn--secondary" href="{{section.cta.url}}" target="{{section.cta.target}}">{{section.cta.title}}</a>
+				</div>
+			{% endif %}
+
+		</div>
+
+		<div class="section-hero-slider__dots">
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
 {% endblock %}

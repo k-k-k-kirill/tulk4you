@@ -13,26 +13,7 @@
     padding: 60px;
 
     ul {
-      li {
-        position: relative;
-        display: block;
-        margin-bottom: 20px;
-        margin-left: 7px;
-        z-index: 0;
-
-        &::before {
-          display: block;
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -7px;
-          border-radius: 50%;
-          width: 15px;
-          height: 15px;
-          background-color: $color-red;
-          z-index: -1;
-        }
-      }
+      @extend .fancy-list;
     }
 
     &__underlay {

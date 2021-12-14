@@ -4,38 +4,40 @@
 <!doctype html>
 <html class="no-js" {{ site.language_attributes }}>
 
-  {% block head %}
+	{% block head %}
 		<head>
 			<meta charset="utf-8">
 			<meta http-equiv="x-ua-compatible" content="ie=edge">
 			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<meta name="google-site-verification" content="GWSOf7vLUdtgel5HbNZK4rXrczDq_ElIn9jRdLaMqvU"/>
 			{{ function('wp_head') }}
 		</head>
-  {% endblock %}
+	{% endblock %}
 
-  <body class="{{ body_class }} {% block body_classes %}{% endblock %}">
-    {{ function('wp_body_open') }}
+	<body class="{{ body_class }} {% block body_classes %}{% endblock %}">
+		{{ function('wp_body_open') }}
 
-    {% block site_body %}
+		{% block site_body %}
 
-      {% block site_header %}
-        {% include 'site-header/site-header.twig' %}
-      {% endblock %}
+		{% block site_header %}
+			{% include 'site-header/site-header.twig' %}
+		{% endblock %}
 
-      <main class="header-margin {% block main_class %}{% endblock %}" role="main">
-        {% block site_content %}
-          {{ __('Sorry, no content was found!', textdomain) }}
-        {% endblock %}
-      </main>
+		<main>
+			class="header-margin {% block main_class %}{% endblock %}" role="main"
+				{% block site_content %}
+					{{ __('Sorry, no content was found!', textdomain) }}
+				{% endblock %}
+			</main>
 
-      {% block site_footer %}
-        {% include 'site-footer/site-footer.twig' %}
-      {% endblock %}
+			{% block site_footer %}
+				{% include 'site-footer/site-footer.twig' %}
+			{% endblock %}
 
-    {% endblock %}
+		{% endblock %}
 
-    {{ function('wp_footer') }}
+		{{ function('wp_footer') }}
 
-  </body>
+	</body>
 
 </html>

@@ -10,12 +10,12 @@
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154990351-1"></script>
 			<script>
 				window.dataLayer = window.dataLayer || [];
-function gtag() {
-dataLayer.push(arguments);
-}
-gtag('js', new Date());
+				function gtag() {
+					dataLayer.push(arguments);
+				}
+				gtag('js', new Date());
 
-gtag('config', 'UA-154990351-1');
+				gtag('config', 'UA-154990351-1');
 			</script>
 			<meta charset="utf-8">
 			<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -34,9 +34,7 @@ gtag('config', 'UA-154990351-1');
 				{% include 'site-header/site-header.twig' %}
 			{% endblock %}
 
-			<main>
-				class="header-margin
-				{% block main_class %}{% endblock %}" role="main"
+			<main class="header-margin {% block main_class %}{% endblock %}" role="main">
 				{% block site_content %}
 					{{ __('Sorry, no content was found!', textdomain) }}
 				{% endblock %}

@@ -6,6 +6,17 @@
 
 	{% block head %}
 		<head>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154990351-1"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+function gtag() {
+dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'UA-154990351-1');
+			</script>
 			<meta charset="utf-8">
 			<meta http-equiv="x-ua-compatible" content="ie=edge">
 			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,12 +30,13 @@
 
 		{% block site_body %}
 
-		{% block site_header %}
-			{% include 'site-header/site-header.twig' %}
-		{% endblock %}
+			{% block site_header %}
+				{% include 'site-header/site-header.twig' %}
+			{% endblock %}
 
-		<main>
-			class="header-margin {% block main_class %}{% endblock %}" role="main"
+			<main>
+				class="header-margin
+				{% block main_class %}{% endblock %}" role="main"
 				{% block site_content %}
 					{{ __('Sorry, no content was found!', textdomain) }}
 				{% endblock %}

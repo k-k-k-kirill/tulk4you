@@ -66,9 +66,9 @@
         - 'echo "Linking current to revision: $BUDDY_EXECUTION_REVISION"'
         - "rm -f current"
         - "ln -s releases/$BUDDY_EXECUTION_REVISION current"
-        # - 'echo "Linking uploads of current revision: $BUDDY_EXECUTION_REVISION"'
-        # - "rm -rf releases/$BUDDY_EXECUTION_REVISION/web/app/uploads"
-        # - "ln -s ~/shared/uploads/ releases/$BUDDY_EXECUTION_REVISION/web/app/uploads"
+        - 'echo "Linking uploads of current revision: $BUDDY_EXECUTION_REVISION"'
+        - "rm -rf releases/$BUDDY_EXECUTION_REVISION/web/app/uploads"
+        - "ln -s ~/shared/uploads/ releases/$BUDDY_EXECUTION_REVISION/web/app/uploads"
         - ""
         - 'echo "Removing old releases"'
         - "cd releases && ls -t | tail -n +11 | xargs rm -rf"

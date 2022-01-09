@@ -57,6 +57,20 @@
 
   &__group {
     margin-bottom: 40px;
+
+    input[type="button"] {
+      @extend .btn;
+      @extend .btn-secondary;
+
+      font-size: 14px;
+      font-weight: 500;
+      min-width: 100px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 2rem;
+    }
   }
 
   &__required {

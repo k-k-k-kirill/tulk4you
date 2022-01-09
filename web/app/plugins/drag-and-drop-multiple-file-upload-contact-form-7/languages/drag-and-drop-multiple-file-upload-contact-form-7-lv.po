@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Drag and Drop Multiple File Upload - Contact Form 7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-19 22:19+0000\n"
-"PO-Revision-Date: 2022-01-09 22:22+0200\n"
+"PO-Revision-Date: 2022-01-09 22:48+0200\n"
 "Language-Team: Русский\n"
 "Plural-Forms: nplurals=3; plural=(n%10==0 || (n%100>=11 && n%100<=19) ? 0 : n"
 "%10==1 && n%100!=11 ? 1 : 2);\n"
@@ -99,7 +99,7 @@ msgstr "vai"
 
 #: inc/dnd-upload-cf7.php:423
 msgid "Remove"
-msgstr "Dzēst"
+msgstr ""
 
 #: inc/dnd-upload-cf7.php:829
 msgid "Send Attachment as links?"

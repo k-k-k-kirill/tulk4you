@@ -13,6 +13,7 @@ web/app/plugins/*
 !web/app/plugins/polylang-pro
 !web/app/plugins/tulk4you-plugin
 !web/app/plugins/all-in-one-seo-pack-pro
+!web/app/plugins/drag-and-drop-multiple-file-upload-contact-form-7
 
 # WordPress
 web/wp

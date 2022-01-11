@@ -88,6 +88,17 @@
   &__toggle {
     &:hover {
       cursor: pointer;
+
+      .nav-mobile__link {
+        color: $color-red;
+      }
+
+      svg {
+        path {
+          transition: all 0.15s ease-in-out !important;
+          fill: $color-red !important;
+        }
+      }
     }
   }
 }

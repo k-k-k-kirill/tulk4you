@@ -84,4 +84,10 @@
       color: $color-red;
     }
   }
+
+  &__toggle {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

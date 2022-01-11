@@ -928,6 +928,33 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_61dd5ffa6d9c1": {
+                    "key": "layout_61dd5ffa6d9c1",
+                    "name": "video",
+                    "label": "Video",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_61dd60056d9c2",
+                            "label": "Video",
+                            "name": "video",
+                            "type": "oembed",
+                            "instructions": "Paste link to the video you want to embed in this section.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "width": "",
+                            "height": "",
+                            "translations": "copy_once"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_60aa6a735ef58": {
                     "key": "layout_60aa6a735ef58",
                     "name": "logos",
@@ -1046,5 +1073,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1622288813
+    "modified": 1641898022
 }

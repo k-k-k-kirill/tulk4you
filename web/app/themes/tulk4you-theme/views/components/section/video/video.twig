@@ -1,0 +1,14 @@
+{% extends "section/section.twig" %}
+
+{% block section_classes %}mb-8 lg:mb-12
+{% endblock %}
+
+{% block section_content %}
+	{% if section.video %}
+		<div class="container grid grid-cols-12 lg:gap-4">
+			<div class="col-span-12 lg:col-start-3 lg:col-span-8 lead">
+				{{section.video}}
+			</div>
+		</div>
+	{% endif %}
+{% endblock %}

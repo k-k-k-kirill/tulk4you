@@ -5,8 +5,7 @@
   font-size: 10px;
   line-height: 1.5;
   color: $color-body;
-
-  @extend .smooth-transition-all;
+  text-decoration: underline;
 
   @media (min-width: 420px) {
     font-size: 14px;

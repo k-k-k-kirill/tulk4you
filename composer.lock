@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c29453b482c3d1ea09690bca39a16ba",
+    "content-hash": "726c5c0c58be523bd5f5778723d22a29",
     "packages": [
         {
             "name": "composer/installers",
@@ -849,6 +849,24 @@
             "homepage": "https://wordpress.org/plugins/akismet/"
         },
         {
+            "name": "wpackagist-plugin/autoptimize",
+            "version": "3.0.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/autoptimize/",
+                "reference": "tags/3.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/autoptimize.3.0.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/autoptimize/"
+        },
+        {
             "name": "wpackagist-plugin/classic-editor",
             "version": "1.6",
             "source": {
@@ -955,6 +973,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-mail-smtp/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-youtube-lyte",
+            "version": "1.7.19",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-youtube-lyte/",
+                "reference": "tags/1.7.19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-youtube-lyte.1.7.19.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-youtube-lyte/"
         }
     ],
     "packages-dev": [

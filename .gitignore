@@ -14,6 +14,7 @@ web/app/plugins/*
 !web/app/plugins/tulk4you-plugin
 !web/app/plugins/all-in-one-seo-pack-pro
 !web/app/plugins/drag-and-drop-multiple-file-upload-contact-form-7
+!web/app/plugins/perfmatters
 
 # WordPress
 web/wp

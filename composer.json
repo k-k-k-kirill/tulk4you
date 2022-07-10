@@ -50,7 +50,7 @@
     "roots/bedrock-autoloader": "^1.0",
     "roots/wordpress": "5.7",
     "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0",
+    "roots/wp-password-bcrypt": "1.1.0",
     "kinsta/kinsta-mu-plugins": "2.3.3",
     "wpackagist-plugin/contact-form-7": "5.4.0",
     "wpackagist-plugin/acf-options-for-polylang": "1.1.10",

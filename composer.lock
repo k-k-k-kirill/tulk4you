@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "726c5c0c58be523bd5f5778723d22a29",
+    "content-hash": "bd879294c75057ffa38b6f016510ba7f",
     "packages": [
         {
             "name": "composer/installers",
@@ -867,24 +867,6 @@
             "homepage": "https://wordpress.org/plugins/autoptimize/"
         },
         {
-            "name": "wpackagist-plugin/classic-editor",
-            "version": "1.6",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/classic-editor/",
-                "reference": "tags/1.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/classic-editor.1.6.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/classic-editor/"
-        },
-        {
             "name": "wpackagist-plugin/contact-form-7",
             "version": "5.4",
             "source": {
@@ -939,24 +921,6 @@
             "homepage": "https://wordpress.org/plugins/contact-form-cfdb7/"
         },
         {
-            "name": "wpackagist-plugin/password-protected",
-            "version": "2.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/password-protected/",
-                "reference": "tags/2.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/password-protected.2.4.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/password-protected/"
-        },
-        {
             "name": "wpackagist-plugin/wp-mail-smtp",
             "version": "3.2.1",
             "source": {
@@ -973,24 +937,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-mail-smtp/"
-        },
-        {
-            "name": "wpackagist-plugin/wp-youtube-lyte",
-            "version": "1.7.19",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-youtube-lyte/",
-                "reference": "tags/1.7.19"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-youtube-lyte.1.7.19.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-youtube-lyte/"
         }
     ],
     "packages-dev": [

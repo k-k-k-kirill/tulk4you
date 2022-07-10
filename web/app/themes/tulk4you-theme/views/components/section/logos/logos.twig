@@ -15,11 +15,11 @@
               <div class="swiper-slide">
                 {% if item.url %}
                   <a class="section-logos__logo" href="{{item.url}}">
-                    <img src="{{item.logo.url}}" />
+                    <img loading="lazy" src="{{item.logo.url}}" />
                   </a>
                 {% else %}
                   <div class="section-logos__logo">
-                    <img src="{{item.logo.url}}" />
+                    <img loading="lazy" src="{{item.logo.url}}" />
                   </div>
                 {% endif %}
               </div>

@@ -58,10 +58,6 @@ class Model {
 	 * Class constructor
 	 */
 	public function __construct() {
-
-		// Custom post types.
-		$this->add_post_type( 'example', new Model\PostTypes\Example() );
-
 		// Taxonomies.
 		$this->add_taxonomy( 'example_taxonomy', new Model\Taxonomies\ExampleTaxonomy() );
 

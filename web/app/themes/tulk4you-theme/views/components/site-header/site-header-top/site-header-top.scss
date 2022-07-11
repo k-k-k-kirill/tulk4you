@@ -12,4 +12,25 @@
       justify-content: flex-end;
     }
   }
+
+  &--mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: $color-gray;
+    z-index: 9999;
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+
+      svg {
+        height: 35px !important;
+        width: auto;
+      }
+    }
+  }
 }

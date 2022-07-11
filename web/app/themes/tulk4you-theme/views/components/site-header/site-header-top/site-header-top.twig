@@ -33,4 +33,29 @@
             {% include "nav/nav-languages/nav-languages.twig" %}
         </div>
     </div>
+
+    <div class="site-header-top--mobile md:hidden">
+        <div class="container site-header-top--mobile__content">
+            {% if company_information.phone %}
+                {% include 'icon-button/icon-button.twig' with { 
+                    url: 'tel:' ~ company_information.phone,
+                    icon: 'telephone'
+                } %}
+            {% endif %}
+
+            {% if company_information.email %}
+                {% include 'icon-button/icon-button.twig' with {
+                    url: 'mailto:' ~ company_information.email,
+                    icon: 'email'
+                } %}
+            {% endif %}
+
+            {% if company_information.display_address %}
+                {% include 'icon-button/icon-button.twig' with {
+                    url: 'https://maps.google.com/?saddr=My+Location&daddr=' ~ company_information.display_address,
+                    icon: 'location',
+                } %}
+            {% endif %}
+        </div>
+    </div>
 {% endif %}

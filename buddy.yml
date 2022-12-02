@@ -27,6 +27,7 @@
       host: "${ssh_host}"
       port: "${ssh_port}"
       authentication_mode: "PASS"
+      timeout: 5400
     - action: "Install composer dependencies"
       type: "SSH_COMMAND"
       login: "${ssh_username}"
@@ -40,6 +41,7 @@
         - "cd ../../themes/tulk4you-theme && composer install"
       run_as_script: true
       shell: "BASH"
+      timeout: 5400
     - action: "Post-deployment action"
       type: "SSH_COMMAND"
       login: "${ssh_username}"
@@ -130,6 +132,7 @@
         - "cd ../../themes/tulk4you-theme && composer install"
       run_as_script: true
       shell: "BASH"
+      timeout: 5400
     - action: "Post-deployment action"
       type: "SSH_COMMAND"
       login: "${ssh_username}"

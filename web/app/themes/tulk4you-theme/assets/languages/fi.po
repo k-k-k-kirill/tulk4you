@@ -1,0 +1,207 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Tulk4You theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-01 21:56+0200\n"
+"PO-Revision-Date: 2022-12-04 14:52+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Domain: languages\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: node_modules/domexception/node_modules/webidl-conversions/lib/index.js:105
+msgid "is not a finite number"
+msgstr ""
+
+#: node_modules/domexception/node_modules/webidl-conversions/lib/index.js:172
+#: node_modules/domexception/node_modules/webidl-conversions/lib/index.js:188
+msgid "is not a finite floating-point value"
+msgstr ""
+
+#: node_modules/domexception/node_modules/webidl-conversions/lib/index.js:198
+msgid "is outside the range of a single-precision floating-point value"
+msgstr ""
+
+#: node_modules/domexception/node_modules/webidl-conversions/lib/index.js:228
+msgid "is a symbol, which cannot be converted to a string"
+msgstr ""
+
+#: node_modules/domexception/node_modules/webidl-conversions/lib/index.js:239
+msgid "is not a valid ByteString"
+msgstr ""
+
+#: node_modules/domexception/node_modules/webidl-conversions/lib/index.js:276
+msgid "is not an object"
+msgstr ""
+
+#: node_modules/domexception/node_modules/webidl-conversions/lib/index.js:288
+msgid "is not a function"
+msgstr ""
+
+#: node_modules/domexception/node_modules/webidl-conversions/lib/index.js:308
+msgid "is not a view on an ArrayBuffer object"
+msgstr ""
+
+#: node_modules/domexception/node_modules/webidl-conversions/lib/index.js:320
+msgid "is not a view on an DataView object"
+msgstr ""
+
+#: views/components/alert/alert.twig:14
+msgctxt "Label for button to close an alert"
+msgid "Close"
+msgstr ""
+
+#: views/components/comment/comment.twig:15
+msgid "Replies"
+msgstr ""
+
+#: views/components/comments/comments.twig:5
+msgid "Comments"
+msgstr ""
+
+#: views/components/comments/comments.twig:14
+msgid "Comments for this post are closed"
+msgstr ""
+
+#: views/components/form/form-new-comment.twig:10
+msgid "Add comment"
+msgstr ""
+
+#: views/components/form/form-new-comment.twig:18
+msgctxt "comment form email field label"
+msgid "Email"
+msgstr ""
+
+#: views/components/form/form-new-comment.twig:22
+msgctxt "comment form author field label"
+msgid "Author"
+msgstr ""
+
+#: views/components/form/form-new-comment.twig:26
+msgctxt "comment form author URL field label"
+msgid "URL"
+msgstr ""
+
+#: views/components/form/form-new-comment.twig:31
+msgctxt "comment form comment field label"
+msgid "Comment"
+msgstr ""
+
+#: views/components/form/form-new-comment.twig:31
+msgid "Write your comment here"
+msgstr ""
+
+#: views/components/form/form-new-comment.twig:38
+msgctxt "label for send button on comment form"
+msgid "Send"
+msgstr ""
+
+#: views/components/form/form-new-comment.twig:39
+msgctxt "label for cancel button on comment form"
+msgid "Cancel"
+msgstr ""
+
+#: views/components/form/form-new-comment.twig:41
+msgid "Your comment will be revised by the site if needed."
+msgstr ""
+
+#: views/components/input/select.twig:21
+#: views/components/input/textarea.twig:26
+msgid "Helper text for the field above."
+msgstr ""
+
+#: views/components/pagination/pagination.twig:20
+msgid "<span class=\"sr-only\">(current)</span>"
+msgstr ""
+
+#: views/components/section/blog-feed/blog-feed.twig:20
+msgid "See all posts"
+msgstr "Kaikki artikkelit"
+
+#: views/components/section/services/services.twig:35
+#: views/components/teaser/teaser-post-featured/teaser-post-featured.twig:27
+#: views/components/teaser/teaser-post-related/teaser-post-related.twig:26
+msgid "Read more"
+msgstr "Lue lisää"
+
+#: views/components/section/statistics/statistics.twig:19
+msgid "Translators"
+msgstr "Käntäjää"
+
+#: views/components/section/statistics/statistics.twig:26
+msgid "Languages"
+msgstr "Kieltä"
+
+#: views/components/section/statistics/statistics.twig:36
+#: views/components/section/statistics/statistics.twig:47
+msgid "Clients"
+msgstr "Asiakasta"
+
+#: views/components/section/statistics/statistics.twig:45
+msgid "Min"
+msgstr ""
+
+#: views/components/teaser/teaser-post-related/teaser-post-related.twig:18
+msgid "Read also"
+msgstr "Lue lisää"
+
+#: views/components/teaser/teaser.twig:14
+#, php-format
+msgid "Read more<span class=\"sr-only\"> about %s</span>"
+msgstr ""
+
+#: views/layouts/404/404.twig:12
+msgid "Sorry, we couldn't find what you're looking for."
+msgstr ""
+
+#: views/layouts/base/base.twig:27
+msgid "Sorry, no content was found!"
+msgstr ""
+
+#: views/layouts/design-system/design-system.twig:12
+msgid "Design System"
+msgstr ""
+
+#: views/layouts/design-system/design-system.twig:46
+#, php-format
+msgid ""
+"No valid data file found for <code>%s</code>. Create one to display an "
+"example of this component. If you have created a file, check that the file "
+"contains vaild JSON syntax."
+msgstr ""
+
+#: views/layouts/home/home.twig:5
+msgid "Blog"
+msgstr "Blogi"
+
+#: views/layouts/search/search.twig:13
+msgid "No results found"
+msgstr ""
+
+#: views/layouts/template-contact-page/template-contact-page.twig:18
+#: views/layouts/template-form-page/template-form-page.twig:24
+msgid "Phone"
+msgstr "Puhelin"
+
+#: views/layouts/template-contact-page/template-contact-page.twig:25
+msgid "Email"
+msgstr "Sähköposti"
+
+#: views/layouts/template-contact-page/template-contact-page.twig:32
+msgid "Address"
+msgstr "Katuosoite"
+
+#: views/layouts/template-contact-page/template-contact-page.twig:39
+msgid "Reg. number"
+msgstr "Y-tunnus"
+
+#: views/layouts/template-form-page/template-form-page.twig:31
+msgid "E-mail"
+msgstr "Sähköposti"

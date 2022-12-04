@@ -3,87 +3,87 @@
  #}
 
 <footer class="site-footer">
-  <section class="site-footer-content">
-    {% block contents %}
-      <div class="container grid grid-cols-12 overflow-x-visible">
-        <div class="col-span-12 lg:col-span-9 py-8 lg:py-12 md:px-6">
-          {% if site.footer_options.title %}
-            <h1 class="site-footer__title mb-4">{{site.footer_options.title}}</h1>
-          {% endif %}
-          
-          {% if site.footer_options.cta %}
-            <a href="{{site.footer_options.cta.url}}" class="btn btn--primary">{{site.footer_options.cta.title}}</a>
-          {% endif %}
-        </div>
+	<section class="site-footer-content">
+		{% block contents %}
+			<div class="container grid grid-cols-12 overflow-x-visible">
+				<div class="col-span-12 lg:col-span-9 py-8 lg:py-12 md:px-6">
+					{% if site.footer_options.title %}
+						<h1 class="site-footer__title mb-4">{{site.footer_options.title}}</h1>
+					{% endif %}
 
-        {% if site.company_information %}
-          {% set company_information = site.company_information %}
+					{% if site.footer_options.cta %}
+						<a href="{{site.footer_options.cta.url}}" class="btn btn--primary">{{site.footer_options.cta.title}}</a>
+					{% endif %}
+				</div>
 
-          <div class="col-span-12 lg:col-span-3">
-            <div class="site-footer__contacts py-6 md:px-6">
-              <div class="site-footer__contacts__underlay"></div>
-              <div class="site-footer__contacts__links">
-                {% if company_information.phone %}
-                    {% include 'icon-link/icon-link.twig' with { 
+				{% if site.company_information %}
+					{% set company_information = site.company_information %}
+
+					<div class="col-span-12 lg:col-span-3">
+						<div class="site-footer__contacts py-6 md:px-6">
+							<div class="site-footer__contacts__underlay"></div>
+							<div class="site-footer__contacts__links">
+								{% if company_information.phone %}
+									{% include 'icon-link/icon-link.twig' with { 
                         url: 'tel:' ~ company_information.phone,
                         text: company_information.phone,
                         icon: 'telephone',
                         footer: true,
                         classes: 'mb-2'
                     } %}
-                {% endif %}
+								{% endif %}
 
-                {% if company_information.email %}
-                    {% include 'icon-link/icon-link.twig' with {
+								{% if company_information.email %}
+									{% include 'icon-link/icon-link.twig' with {
                         url: 'mailto:' ~ company_information.email,
                         text: company_information.email,
                         icon: 'email',
                         footer: true,
                         classes: 'mb-2'
                     } %}
-                {% endif %}
+								{% endif %}
 
-                {% if company_information.display_address %}
-                    {% include 'icon-link/icon-link.twig' with {
+								{% if company_information.display_address %}
+									{% include 'icon-link/icon-link.twig' with {
                         url: 'https://maps.google.com/?saddr=My+Location&daddr=' ~ company_information.display_address,
                         text: company_information.display_address,
                         icon: 'location',
                         footer: true,
                         classes: 'mb-2'
                     } %}
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        {% endif %}
-      </div>
-    {% endblock %}
-  </section>
-  <section class="site-footer-credits pb-4">
-    <div class="container md:px-6">
-      <div class="grid grid-cols-12">
-        <div class="col-span-12 lg:col-span-6">
-          <a href="{{polylang.home}}" class="site-logo">
-            {% include 'assets/images/logo.svg' %}
-          </a>
-          <p class="site-footer-credits__copy hidden lg:block">
-            © 2021 Tulk4you. SIA "INTELTEKO"
-          </p>
-        </div>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		{% endblock %}
+	</section>
+	<section class="site-footer-credits pb-4">
+		<div class="container md:px-6">
+			<div class="grid grid-cols-12">
+				<div class="col-span-12 lg:col-span-6">
+					<a href="{{polylang.home}}" class="site-logo">
+						{% include 'assets/images/logo.svg' %}
+					</a>
+					<p class="site-footer-credits__copy hidden lg:block">
+						© 2021 Tulk4you. SIA "INTELTEKO"
+					</p>
+				</div>
 
-        {% if menu.footer %}
-          <div class="col-span-12 lg:col-span-6 flex align-items-center my-4 lg:my-0 lg:justify-end">
-            {% include 'nav/nav-footer/nav-footer.twig' with {
+				{% if menu.footer %}
+					<div class="col-span-12 lg:col-span-6 flex align-items-center my-4 lg:my-0 lg:justify-end">
+						{% include 'nav/nav-footer/nav-footer.twig' with {
               nav_items: menu.desktop,
               classes: 'site-header__nav hidden lg:flex'
             } %}
-          </div>
-        {% endif %}
-      </div>
+					</div>
+				{% endif %}
+			</div>
 
-      <p class="site-footer-credits__copy lg:hidden">
-        © 2021 Tulk4you. SIA "INTELTEKO"
-      </p>
-    </div>
-  </section>
+			<p class="site-footer-credits__copy lg:hidden">
+				© 2022 Tulk4you.
+			</p>
+		</div>
+	</section>
 </footer>

@@ -1,74 +1,71 @@
 {% extends "base/base.twig" %}
 
 {% block site_content %}
-  <div class="container md:px-6 mt-6 md:mt-12">
-    <h1 class="mb-8">{{post.title}}</h1>
-  </div>
+	<div class="container md:px-6 mt-6 md:mt-12">
+		<h1 class="mb-8">{{post.title}}</h1>
+	</div>
 
-  <div class="template-contact-page relative">
-    <div class="container md:px-6 my-6 lg:my-12">
-      <div class="template-contact-page__content">
-        <div class="grid grid-cols-12">
-          {% if site.company_information %}
-            {% set company = site.company_information %}
-            <div class="col-span-12 lg:col-span-6">
-              <div class="grid grid-cols-12">
-                {% if company.phone %}
-                  <div class="col-span-6 mb-8">
-                    <h6 class="mb-1">{{__('Phone', 'tulk4you-theme')}}</h6>
-                    <a class="link lead" href="tel:{{company.phone}}">{{company.phone}}</a>
-                  </div>
-                {% endif %}
+	<div class="template-contact-page relative">
+		<div class="container md:px-6 my-6 lg:my-12">
+			<div class="template-contact-page__content">
+				<div class="grid grid-cols-12">
+					{% if site.company_information %}
+						{% set company = site.company_information %}
+						<div class="col-span-12 lg:col-span-6 mb-4 lg:mb-0">
+							<div class="grid grid-cols-12">
+								{% if company.phone %}
+									<div class="col-span-6 mb-8">
+										<h6 class="mb-1">{{__('Phone', 'tulk4you-theme')}}</h6>
+										<a class="link lead" href="tel:{{company.phone}}">{{company.phone}}</a>
+									</div>
+								{% endif %}
 
-                {% if company.email %}
-                  <div class="col-span-6 mb-8">
-                    <h6 class="mb-1">{{__('Email', 'tulk4you-theme')}}</h6>
-                    <a class="link lead" href="mailto:{{company.email}}">{{company.email}}</a>
-                  </div>
-                {% endif %}
+								{% if company.email %}
+									<div class="col-span-6 mb-8">
+										<h6 class="mb-1">{{__('Email', 'tulk4you-theme')}}</h6>
+										<a class="link lead" href="mailto:{{company.email}}">{{company.email}}</a>
+									</div>
+								{% endif %}
 
-                {% if company.display_address %}
-                  <div class="col-span-6">
-                    <h6 class="mb-1">{{__('Address', 'tulk4you-theme')}}</h6>
-                    <a class="link lead" target="_blank" href="https://maps.google.com/?saddr=My+Location&daddr={{company.display_address}}">{{company.display_address}}</a>
-                  </div>
-                {% endif %}
+								{% if company.display_address %}
+									<div class="col-span-6">
+										<h6 class="mb-1">{{__('Address', 'tulk4you-theme')}}</h6>
+										<a class="link lead" target="_blank" href="https://maps.google.com/?saddr=My+Location&daddr={{company.display_address}}">{{company.display_address}}</a>
+									</div>
+								{% endif %}
 
-                {% if company.registration_number or company.name %}
-                  <div class="col-span-6">
-                    <h6 class="mb-1">{{__('Reg. number', 'tulk4you-theme')}}</h6>
+								{% if company.registration_number or company.name %}
+									<div class="col-span-6">
+										<h6 class="mb-1">{{__('Reg. number', 'tulk4you-theme')}}</h6>
 
-                    {% if company.registration_number %}
-                      <p class="lead">{{company.registration_number}}</p>
-                    {% endif %}
+										{% if company.registration_number %}
+											<p class="lead">{{company.registration_number}}</p>
+										{% endif %}
 
-                    {% if company.official_name %}
-                      <p class="lead">{{company.official_name}}</p>
-                    {% endif %}
-                  </div>
-                {% endif %}
-                
-              </div>
-            </div>
-          {% endif %}
-        </div>
-      </div>
-    </div>
+										{% if company.official_name %}
+											<p class="lead">{{company.official_name}}</p>
+										{% endif %}
+									</div>
+								{% endif %}
 
-    {% if company.location %}
-      <div class="template-contact-page__map__wrapper">
-        <div data-lat="{{company.location.lat}}" data-lng="{{company.location.lng}}" class="js-contact-page-map template-contact-page__map"></div>
-      </div>
-    {% endif %}
-  </div>
+							</div>
+						</div>
 
-  {% if cta %}
-    {% set cta_bundle = {
-      title: cta.title,
-      link: cta.link,
-    } %}
+						{% if company.contact_page_image %}
+							<div class="col-span-12 lg:col-span-6">
+								{% set image_object = TimberImage(company.contact_page_image) %}
+								{{responsive_image(image_object.id, 'post-thumbnail', 'post-thumbnail', image_object.alt)}}
+							</div>
+						{% endif %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
 
-    {% include "section/cta/cta.twig" with { section: cta_bundle } %}
-  {% endif %}
-  
+		{% if company.location and company.display_address %}
+			<div class="template-contact-page__map__wrapper">
+				<div data-lat="{{company.location.lat}}" data-lng="{{company.location.lng}}" class="js-contact-page-map template-contact-page__map"></div>
+			</div>
+		{% endif %}
+	</div>
 {% endblock %}

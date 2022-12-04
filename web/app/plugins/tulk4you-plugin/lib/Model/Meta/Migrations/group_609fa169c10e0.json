@@ -116,6 +116,31 @@
                     "translations": "copy_once"
                 },
                 {
+                    "key": "field_638c93798c4b0",
+                    "label": "Contact page image",
+                    "name": "contact_page_image",
+                    "type": "image",
+                    "instructions": "Upload image that will be shown instead of google map on contact page",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "translations": "copy_once"
+                },
+                {
                     "key": "field_60affeeccd88b",
                     "label": "Registration number",
                     "name": "registration_number",
@@ -175,5 +200,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1622146963
+    "modified": 1670157258
 }

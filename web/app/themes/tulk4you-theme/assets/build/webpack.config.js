@@ -1,19 +1,19 @@
-'use strict'; // eslint-disable-line
+"use strict"; // eslint-disable-line
 
 // Webpack tools.
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 // Our asset config.
-const config = require('../config')
+const config = require('../config');
 
 // Other configs.
-const postCssConfig = require('./postcss.config')
+const postCssConfig = require('./postcss.config');
 
 module.exports = (env, argv) => ({
   entry: {
@@ -43,12 +43,6 @@ module.exports = (env, argv) => ({
             loader: 'babel-loader',
             options: {
               configFile: path.resolve(__dirname, 'babel.config.js'),
-            },
-          },
-          {
-            loader: 'eslint-loader',
-            options: {
-              configFile: path.resolve(__dirname, '.eslintrc.js'),
             },
           },
         ],
@@ -100,13 +94,11 @@ module.exports = (env, argv) => ({
     new StyleLintPlugin({
       configFile: path.resolve(__dirname, '.stylelintrc.js'),
     }),
-    new WebpackManifestPlugin(
-      {
-        fileName: 'manifest.json',
-        filter: (file) => !file.path.match(/\.svg|png|jpg|woff|woff2|js.LICENSE.txt|js.LICENSE$/),
-        publicPath: '',
-      },
-    ),
+    new WebpackManifestPlugin({
+      fileName: 'manifest.json',
+      filter: (file) => !file.path.match(/\.svg|png|jpg|woff|woff2|js.LICENSE.txt|js.LICENSE$/),
+      publicPath: '',
+    }),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -119,13 +111,11 @@ module.exports = (env, argv) => ({
         },
       ],
     }),
-    new BrowserSyncPlugin(
-      {
-        host: config.urls.devHost,
-        port: config.urls.devPort,
-        proxy: config.urls.devUrl,
-      },
-    ),
+    new BrowserSyncPlugin({
+      host: config.urls.devHost,
+      port: config.urls.devPort,
+      proxy: config.urls.devUrl,
+    }),
   ],
   optimization: {
     runtimeChunk: 'single',
@@ -137,7 +127,9 @@ module.exports = (env, argv) => ({
         defaultVendors: {
           test: /[\\/]node_modules[\\/]/,
           name(module) {
-            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+            const packageName = module.context.match(
+              /[\\/]node_modules[\\/](.*?)([\\/]|$)/,
+            )[1];
 
             return `vendor/vendor-npm.${packageName.replace('@', '')}`;
           },
@@ -145,15 +137,18 @@ module.exports = (env, argv) => ({
       },
     },
     minimize: argv.mode === 'production',
-    minimizer: argv.mode === 'production' ? [
-      new TerserPlugin({
-        terserOptions: {
-          output: {
-            comments: false,
-          },
-        },
-      }),
-    ] : [],
+    minimizer:
+			argv.mode === 'production'
+			  ? [
+			    new TerserPlugin({
+			      terserOptions: {
+			        output: {
+			          comments: false,
+			        },
+			      },
+			    }),
+				  ]
+			  : [],
   },
   externals: {
     jQuery: 'jQuery',

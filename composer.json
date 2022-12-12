@@ -52,7 +52,7 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "kinsta/kinsta-mu-plugins": "2.3.3",
-    "wpackagist-plugin/contact-form-7": "5.4.0",
+    "wpackagist-plugin/contact-form-7": "5.7",
     "wpackagist-plugin/acf-options-for-polylang": "1.1.10",
     "wpackagist-plugin/wp-mail-smtp": "3.2.1",
     "wpackagist-plugin/akismet": "4.2.1",

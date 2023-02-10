@@ -6,9 +6,9 @@
 
 	{% block head %}
 		<head>
-			{% if '/en' in site.current_url %}
+			{% if '.fi' in  site.current_url and '/en' in site.current_url %}
 				<script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/2c86c9f2e8674c0d9eb6af1dcc468e4fcebdfba0b04b40219a172f5e3eddfdec.js"></script>
-			{% elseif '/ru' in site.current_url %}
+			{% elseif '.fi' in  site.current_url and '/ru' in site.current_url %}
 				<script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/a6cf94a196bf407da5ee1efa90e78d13426bdc4c750c4e9bb0c8b6dd91afde92.js"></script>
 			{% else %}
 				<script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/57e590d237834540b7f20f27d0e160dc90206532b354402cb3586ae5f2c928d2.js"></script>

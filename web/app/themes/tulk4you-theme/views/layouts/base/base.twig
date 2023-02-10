@@ -6,23 +6,37 @@
 
 	{% block head %}
 		<head>
+			{% if '/en' in site.site_url %}
+				<script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/2c86c9f2e8674c0d9eb6af1dcc468e4fcebdfba0b04b40219a172f5e3eddfdec.js"></script>
+			{% elseif '/ru' in site.site_url %}
+				<script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/a6cf94a196bf407da5ee1efa90e78d13426bdc4c750c4e9bb0c8b6dd91afde92.js"></script>
+			{% else %}
+				<script async type="text/javascript" src="https://userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/57e590d237834540b7f20f27d0e160dc90206532b354402cb3586ae5f2c928d2.js"></script>
+			{% endif %}
 			<!-- Google Tag Manager -->
-			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			})(window,document,'script','dataLayer','GTM-PFKDQT9');</script>
+			<script>
+				(function (w, d, s, l, i) {
+w[l] = w[l] || [];
+w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s),
+dl = l != 'dataLayer' ? '&l=' + l : '';
+j.async = true;
+j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-PFKDQT9');
+			</script>
 			<!-- End Google Tag Manager -->
 			<!-- Global site tag (gtag.js) - Google Analytics -->
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154990351-1"></script>
 			<script>
 				window.dataLayer = window.dataLayer || [];
-				function gtag() {
-					dataLayer.push(arguments);
-				}
-				gtag('js', new Date());
+function gtag() {
+dataLayer.push(arguments);
+}
+gtag('js', new Date());
 
-				gtag('config', 'UA-154990351-1');
+gtag('config', 'UA-154990351-1');
 			</script>
 			<meta charset="utf-8">
 			<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -32,10 +46,12 @@
 		</head>
 	{% endblock %}
 
-	<body class="{{ body_class }} {% block body_classes %}{% endblock %}">
+	<body
+		class="{{ body_class }} {% block body_classes %}{% endblock %}">
 		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFKDQT9"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFKDQT9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
 		<!-- End Google Tag Manager (noscript) -->
 		{{ function('wp_body_open') }}
 
@@ -45,7 +61,9 @@
 				{% include 'site-header/site-header.twig' %}
 			{% endblock %}
 
-			<main class="header-margin {% block main_class %}{% endblock %}" role="main">
+			<main>
+				class="header-margin
+				{% block main_class %}{% endblock %}" role="main"
 				{% block site_content %}
 					{{ __('Sorry, no content was found!', textdomain) }}
 				{% endblock %}

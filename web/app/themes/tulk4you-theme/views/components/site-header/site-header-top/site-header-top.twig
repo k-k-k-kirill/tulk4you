@@ -1,61 +1,36 @@
 {% if site.company_information %}
-    {% set company_information = site.company_information %}
+	{% set company_information = site.company_information %}
 
-    <div class="site-header-top">
-        <div class="container site-header-top__content">
-            {% if company_information.phone %}
-                {% include 'icon-link/icon-link.twig' with { 
+	<div class="site-header-top">
+		<div class="container site-header-top__content">
+			{% if company_information.phone %}
+				{% include 'icon-link/icon-link.twig' with { 
                     url: 'tel:' ~ company_information.phone,
                     text: company_information.phone,
                     classes: 'md:mr-4', 
                     icon: 'telephone'
                 } %}
-            {% endif %}
+			{% endif %}
 
-            {% if company_information.email %}
-                {% include 'icon-link/icon-link.twig' with {
+			{% if company_information.email %}
+				{% include 'icon-link/icon-link.twig' with {
                     url: 'mailto:' ~ company_information.email,
                     text: company_information.email,
                     classes: 'md:mr-4',
                     icon: 'email'
                 } %}
-            {% endif %}
+			{% endif %}
 
-            {% if company_information.display_address %}
-                {% include 'icon-link/icon-link.twig' with {
+			{% if company_information.display_address %}
+				{% include 'icon-link/icon-link.twig' with {
                     url: 'https://maps.google.com/?saddr=My+Location&daddr=' ~ company_information.display_address,
                     text: company_information.display_address,
                     icon: 'location',
                     classes: 'hide-on-mobile mr-4'
                 } %}
-            {% endif %}
+			{% endif %}
 
-            {% include "nav/nav-languages/nav-languages.twig" %}
-        </div>
-    </div>
-
-    <div class="site-header-top--mobile md:hidden">
-        <div class="container site-header-top--mobile__content">
-            {% if company_information.phone %}
-                {% include 'icon-button/icon-button.twig' with { 
-                    url: 'tel:' ~ company_information.phone,
-                    icon: 'telephone'
-                } %}
-            {% endif %}
-
-            {% if company_information.email %}
-                {% include 'icon-button/icon-button.twig' with {
-                    url: 'mailto:' ~ company_information.email,
-                    icon: 'email'
-                } %}
-            {% endif %}
-
-            {% if company_information.display_address %}
-                {% include 'icon-button/icon-button.twig' with {
-                    url: 'https://maps.google.com/?saddr=My+Location&daddr=' ~ company_information.display_address,
-                    icon: 'location',
-                } %}
-            {% endif %}
-        </div>
-    </div>
+			{% include "nav/nav-languages/nav-languages.twig" %}
+		</div>
+	</div>
 {% endif %}

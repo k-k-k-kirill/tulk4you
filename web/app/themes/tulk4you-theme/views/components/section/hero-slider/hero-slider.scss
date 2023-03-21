@@ -3,16 +3,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 200px;
   min-height: calc(100vh - 149px);
+  margin-bottom: 80px;
 
   @media (min-width: 768px) {
     padding-top: 80px;
+    margin-bottom: 0;
   }
 
   @media (min-width: 1024px) {
-    padding-top: 150px;
+    padding-top: 300px;
     min-height: calc(100vh - 169px);
+    margin-bottom: 0;
   }
 
   &__main {
@@ -97,39 +100,6 @@
     &:hover,
     &:focus {
       color: $color-red;
-    }
-  }
-
-  &__dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 120px;
-
-    @media (min-width: 350px) {
-      margin-top: 170px;
-    }
-
-    @media (min-width: 768px) {
-      margin-top: 220px;
-    }
-
-    .swiper-pagination {
-      transform: rotate(90deg);
-
-      .swiper-pagination-bullet {
-        width: 10px;
-        height: 10px;
-        background-color: $color-gray;
-        opacity: 1;
-
-        &:not(:last-child) {
-          margin-right: 10px;
-        }
-
-        &-active {
-          background-color: $color-red;
-        }
-      }
     }
   }
 }

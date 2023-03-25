@@ -9,13 +9,13 @@
 
   @media (min-width: 768px) {
     padding-top: 80px;
-    margin-bottom: 0;
+    margin-bottom: 100px;
   }
 
   @media (min-width: 1024px) {
     padding-top: 300px;
     min-height: calc(100vh - 169px);
-    margin-bottom: 0;
+    margin-bottom: 140px;
   }
 
   &__main {
@@ -31,8 +31,8 @@
       width: 160%;
       height: 100%;
 
-      @media (min-width: 768px) {
-        top: -50px;
+      @media (min-width: 1024px) {
+        top: 120px;
       }
 
       &__circle {

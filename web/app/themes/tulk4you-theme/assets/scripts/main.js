@@ -55,8 +55,8 @@ const pixelsThemeApp = (function main() {
 			loop: true,
 			autoplay: {
 				delay: 1500,
-				disableOnInteraction: true,
-				pauseOnMouseEnter: true,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: false,
 			},
 		});
 

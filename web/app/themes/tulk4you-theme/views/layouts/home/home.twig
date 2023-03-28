@@ -1,27 +1,27 @@
 {% extends "base/base.twig" %}
 
 {% block site_content %}
-  <div class="container md:px-6 py-6 md:py-12">
-    <h1>{{__('Blog', 'tulk4you-theme')}}</h1>
-  </div>
+	<div class="container md:px-6 py-6 md:py-12 md:mt-6">
+		<h1>{{__('Blog', 'tulk4you-theme')}}</h1>
+	</div>
 
-  {% for item in posts %}
-    {% if loop.first %}
-      {% include "teaser/teaser-post-featured/teaser-post-featured.twig" with { post: item } %}
-    {% endif %}
-  {% endfor %}
+	{% for item in posts %}
+		{% if loop.first %}
+			{% include "teaser/teaser-post-featured/teaser-post-featured.twig" with { post: item } %}
+		{% endif %}
+	{% endfor %}
 
-  <div class="container md:px-6 py-6 md:py-12">
-    <div class="grid grid-cols-12 md:gap-4">
-      {% for item in posts %}
-        {% if not loop.first %}
-          <div class="col-span-12 md:col-span-6">
-            {% include "teaser/teaser-post/teaser-post.twig" with { post: item } %}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
+	<div class="container md:px-6 py-6 md:py-12">
+		<div class="grid grid-cols-12 md:gap-4">
+			{% for item in posts %}
+				{% if not loop.first %}
+					<div class="col-span-12 md:col-span-6">
+						{% include "teaser/teaser-post/teaser-post.twig" with { post: item } %}
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
 
-    {% include 'pagination/pagination.twig' with {pagination: pagination} %}
-  </div>
+		{% include 'pagination/pagination.twig' with {pagination: pagination} %}
+	</div>
 {% endblock %}
